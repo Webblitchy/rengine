@@ -1,9 +1,11 @@
+from reNgine.settings import BASE_DIR, RENGINE_HOME
 import validators
 import csv
 import io
 import os
 import requests
 import threading
+import jinja2
 
 from datetime import timedelta
 from operator import and_, or_
@@ -16,6 +18,7 @@ from django.urls import reverse
 from django.conf import settings
 from django.db.models import Count, Q
 from django.utils.safestring import mark_safe
+from weasyprint import HTML
 
 from targetApp.models import *
 from startScan.models import *
@@ -23,6 +26,12 @@ from scanEngine.models import *
 from targetApp.forms import *
 from reNgine.common_func import *
 
+def create_dir(path):
+    if not os.path.isdir(path):
+        # automatically create the folder (can be edited by user)
+        # https://stackoverflow.com/questions/47618490/python-create-a-directory-with-777-permissions
+        os.umask(0)
+        os.makedirs(path, mode=0o777)
 
 
 def index(request):
@@ -162,6 +171,30 @@ def add_target(request):
                         request, messages.ERROR, 'Invalid File type!')
                     return http.HttpResponseRedirect(reverse('add_target'))
             return http.HttpResponseRedirect(reverse('list_target'))
+        elif "add-internal-target" in request.POST:
+            name = request.POST["internal_name"] if "internal_name" in request.POST else ""
+            ip_address = request.POST["internal_ip_address"] if "internal_ip_address" in request.POST else ""
+            description = request.POST["internal_target_description"] if "internal_target_description" in request.POST else ""
+
+            if not name or not ip_address:
+                messages.add_message(request, messages.ERROR, 'Internal target without name or ip address')
+            elif not Domain.objects.filter(name=name).exists():
+
+                cert_dir = f"{RENGINE_HOME}/user-certs/{name}"
+                create_dir(cert_dir)
+
+                Domain.objects.create(
+                    name=name,
+                    description=description,
+                    ip_address_cidr=ip_address,
+                    is_internal=True,
+                    insert_date=timezone.now(),
+                )
+                messages.add_message(request, messages.SUCCESS, 'Internal target added successfully!')
+            else:
+                messages.add_message(request, messages.WARNING, 'Internal target already added!')
+            return http.HttpResponseRedirect(reverse('list_target'))
+
     context = {
         "add_target_li": "active",
         "target_data_active": "active",
@@ -303,6 +336,24 @@ def target_summary(request, id):
 
     return render(request, 'target/summary.html', context)
 
+def upload_org_template(template_file, org_name):
+    # Write the new latex_template
+
+    try:
+        template_dir = os.path.join(RENGINE_HOME, "latex_templates", org_name)
+        new_template = os.path.join(template_dir, "template.tex.jinja")
+
+        create_dir(template_dir)
+
+        with open(new_template, 'wb+') as destination:
+            for chunk in template_file.chunks():
+                destination.write(chunk)  
+
+        return True
+
+    except Exception:
+        return False
+
 def add_organization(request):
     form = AddOrganizationForm(request.POST or None)
     if request.method == "POST":
@@ -321,6 +372,13 @@ def add_organization(request):
                 'Organization ' +
                 form.cleaned_data['name'] +
                 ' added successfully')
+
+            template_dir = f"{RENGINE_HOME}/latex_templates/{organization.name}"
+            create_dir(template_dir)
+
+            if 'latex_template' in request.FILES.keys():
+                upload_org_template(request.FILES["latex_template"], organization.name)
+
             return http.HttpResponseRedirect(reverse('list_organization'))
     context = {
         "organization_active": "active",
@@ -330,9 +388,11 @@ def add_organization(request):
 
 def list_organization(request):
     organizations = Organization.objects.all().order_by('-insert_date')
+    statuses = Organization.Status.choices
     context = {
         'organization_active': 'active',
-        'organizations': organizations
+        'organizations': organizations,
+        'statuses' : statuses,
     }
     return render(request, 'organization/list.html', context)
 
@@ -374,6 +434,10 @@ def update_organization(request, id):
             for domain_id in request.POST.getlist("domains"):
                 domain = Domain.objects.get(id=domain_id)
                 organization.domains.add(domain)
+
+            if 'latex_template' in request.FILES.keys():
+                upload_org_template(request.FILES["latex_template"], organization.name)
+
             messages.add_message(
                 request,
                 messages.INFO,
@@ -391,3 +455,172 @@ def update_organization(request, id):
         "form": form
     }
     return render(request, 'organization/update.html', context)
+
+
+def update_testing_status(request, id):
+    if request.method == "POST":
+        try:
+            organization = Organization.objects.filter(id=id)
+            body = json.loads(request.body)
+            status = body["testing_status"]
+            organization.update(status = status)
+            messages.add_message(
+                    request,
+                    messages.INFO,
+                    'Status updated for {}!'.format(organization.get().name))
+            responseData = {'status': 'true'}
+        except Exception:
+            messages.add_message(
+                    request,
+                    messages.ERROR,
+                    'Failed to update status!')
+            responseData = {'status': 'false'}
+        return http.JsonResponse(responseData)
+
+def jinja_to_tex(filename, folder, id):
+    organization = Organization.objects.get(id=id)
+
+    domains = []
+    for d in organization.get_domains():
+        domain = {}
+        domain["name"] = d.name
+        domain["ip"] = d.ip_address_cidr
+        domain["description"] = d.description
+        domain["is_internal"] = d.is_internal
+        # domain["domain_ip"] = d.domain_info.ip_address
+        # print(d.domain_info.ip_address)
+
+        domain["vulnerabilities"] = Vulnerability.objects.filter(target_domain=d).order_by('-severity')
+        if d.is_internal:
+            domain["internal_ips"] = InternalIp.objects.filter(target_domain=d)
+
+        all_subs = Subdomain.objects.filter(target_domain=d)
+        subdomains = []
+        for sub in all_subs:
+            subdomain = {}
+            subdomain["name"] = sub.name
+            subdomain["page_title"] = sub.page_title
+            subdomain["content_type"] = sub.content_type
+            subdomains.append(subdomain)
+
+        domain["subdomains"] = subdomains
+
+        domains.append(domain)
+
+
+    # Convert the jinja template to tex file
+    latex_jinja_env = jinja2.Environment(
+        loader = jinja2.FileSystemLoader(folder),
+        trim_blocks = True,
+        lstrip_blocks = True,
+        autoescape = False,
+    )
+
+    try:
+        template = latex_jinja_env.get_template(filename)
+    except Exception as e:
+        message = "Failed to convert to latex : " + str(e)
+        return message
+
+    try:
+        with open(f"{folder}/{filename[:-6]}", "w") as f:
+            f.write(template.render(
+                org_name = organization.name,
+                org_desc = organization.description,
+                org_creation = organization.insert_date,
+                org_status = organization.get_status_display(),
+                domains = domains,
+            ))
+    except Exception as e:
+        message = "Failed to render latex file : " + str(e)
+        return message
+
+    return "OK"
+
+
+
+def generate_organization_report(request, id):
+    if request.method == "GET":
+        responseData = {'status': 'error'} # by default
+
+        organization = Organization.objects.get(id=id)
+
+        org_name = organization.name
+
+        output_dir = os.path.join(RENGINE_HOME, "latex_templates", org_name)
+        tex_file = os.path.join(output_dir, "template.tex")
+
+        if not os.path.isdir(output_dir):
+            messages.error(request, f"Error: template folder not found '{output_dir}'")
+            return http.JsonResponse(responseData)
+
+        if len(os.listdir(output_dir)) == 0:
+            messages.error(request, f"Error: template folder empty '{output_dir}'. Add a tex jinja template file !")
+            return http.JsonResponse(responseData)
+
+        # explore recursively to get all the tex-jinja2 files
+        for currentpath, folders, files in os.walk(output_dir):
+            for file in files:
+                if file.endswith(".tex.jinja"):
+                    status = jinja_to_tex(file, currentpath, id)
+                    if status != "OK":
+                        messages.error(request, status)
+                        return http.JsonResponse(responseData)
+
+        process = subprocess.run(["latexmk", "-pdf", "-bibtex", f"-outdir={output_dir}", tex_file], capture_output=True)
+        if process.returncode != 0:
+            if process.returncode == 11:
+                message = f"Could not find the template.tex.jinja file in '{output_dir}'"
+                messages.error(request, message)
+            else:
+                responseData = {'status': 'generation failed'}
+                messages.error(request, 'Failed to generate the PDF ! (Read the error log file)')
+                return http.JsonResponse(responseData)
+
+
+        else:
+            subprocess.run(["latexmk", "-c", f"-outdir={output_dir}", tex_file])
+
+            messages.info(request, "Report successfully generated")
+            responseData = {'status': 'generation success'}
+            return http.JsonResponse(responseData)
+
+        return http.JsonResponse(responseData)
+
+def download_report_pdf(request, id):
+    if request.method == "GET":
+        organization = Organization.objects.get(id=id)
+
+        org_name = organization.name
+
+        output_dir = os.path.join(RENGINE_HOME, "latex_templates", org_name)
+
+        try:
+            pdf = open(f"{output_dir}/template.pdf", 'rb')
+            return http.FileResponse(pdf, as_attachment=True, filename=f"Report-{org_name}.pdf")
+
+        except Exception:
+            messages.error(request, 'Failed to read the generated PDF !')
+
+        return http.HttpResponseRedirect(reverse('list_organization'))
+
+def download_error_logs(request, id):
+    if request.method == "GET":
+        organization = Organization.objects.get(id=id)
+
+        org_name = organization.name
+
+        output_dir = os.path.join(RENGINE_HOME, "latex_templates", org_name)
+
+        try:
+            log = open(f"{output_dir}/template.log", 'rb')
+            return http.FileResponse(log, as_attachment=False, filename=f"Errors-{org_name}.log")
+
+        except Exception :
+            messages.error(request, "Failed to get error logs !")
+
+        return http.HttpResponseRedirect(reverse('list_organization'))
+
+def download_example_template(request):
+    path = os.path.join(RENGINE_HOME, "latex_templates/example_template.tex.jinja")
+    return http.FileResponse(open(path, 'rb'), as_attachment=False, filename=f"template.tex.jinja")

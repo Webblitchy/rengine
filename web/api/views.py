@@ -911,6 +911,19 @@ class CMSDetector(APIView):
 			response = {'status': False, 'message': str(e)}
 		return Response(response)
 
+class CheckInternalIP(APIView):
+	def get(self, request):
+		req = self.request
+		ip_address = req.query_params.get('ip')
+
+		try:
+			logging.warning(ip_address)
+			result = requests.get(f"http://{ip_address}:4321", timeout=5)
+			response = {'status': result.ok}
+		except:
+			response = {"status": False}
+
+		return Response(response)
 
 class IPToDomain(APIView):
 	def get(self, request):
@@ -919,8 +932,11 @@ class IPToDomain(APIView):
 		if ip_address:
 			options = FirefoxOptions()
 			options.add_argument("--headless")
+			# logging.error(ip_address) -- nécessaire pour avoir l'erreur d'après
 			driver = webdriver.Firefox(options=options)
 
+
+	
 			# ip address may contain ip or CIDR, for ip use ip for CIDR use address
 			# as /net
 			if '/' in ip_address:
@@ -929,7 +945,7 @@ class IPToDomain(APIView):
 				driver.get('https://bgp.he.net/ip/{}#_dns'.format(ip_address))
 
 			try:
-				element = WebDriverWait(driver, 30).until(
+				element = WebDriverWait(driver, 5).until(
 					EC.presence_of_element_located((By.ID, "tab_dns"))
 				)
 				# get all elements
@@ -963,6 +979,7 @@ class IPToDomain(APIView):
 					'message': 'Exception {}'.format(e)
 				}
 			finally:
+				logging.error("GET")
 				driver.quit()
 				return Response(response)
 		return Response({
@@ -1836,6 +1853,24 @@ class SubdomainDatatableViewSet(viewsets.ModelViewSet):
 					print(e)
 
 		return qs
+
+class InternalipsDatatableViewSet(viewsets.ModelViewSet):
+	queryset = InternalIp.objects.none()
+	serializer_class = InternalipsSerializer
+
+	def get_queryset(self):
+		req = self.request
+
+		target_id = req.query_params.get('target_id')
+
+		if target_id:
+			self.queryset = InternalIp.objects.filter(
+				target_domain__id=target_id).distinct()
+		else:
+			self.queryset = InternalIp.objects.distinct()
+
+		return self.queryset
+
 
 
 class ListEndpoints(APIView):

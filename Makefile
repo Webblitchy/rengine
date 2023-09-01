@@ -13,7 +13,7 @@ SERVICES          := db web proxy redis celery celery-beat tor
 .PHONY: setup certs up build username pull down stop restart rm logs
 
 certs:		    ## Generate certificates.
-	@${COMPOSE_PREFIX_CMD} docker-compose -f docker-compose.setup.yml run --rm certs
+	@${COMPOSE_PREFIX_CMD} docker-compose -f docker-compose.setup.yml run --build --rm certs
 
 setup:			## Generate certificates.
 	@make certs

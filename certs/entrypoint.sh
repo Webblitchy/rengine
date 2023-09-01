@@ -5,7 +5,7 @@ cert() {
   FILENAME=${2:-app}
 
   echo "Creating new certificate for ${COMMON_NAME}"
-  
+
   # Generate a new RSA key pair if does not exist
   if ! test -f ${CERT}_rsa.key; then
     openssl genrsa -out ${FILENAME}.key 4096
@@ -14,10 +14,12 @@ cert() {
   fi
 
   # Request a new certificate for the generated key pair
+  openssl version
   openssl req -new -sha256 \
      -key ${FILENAME}.key \
      -out ${FILENAME}.csr \
-     -subj "/C=${COUNTRY_CODE}/ST=${STATE}/L=${CITY}/O=${COMPANY}/CN=${COMMON_NAME}"
+     -subj "/C=${COUNTRY_CODE}/ST=${STATE}/L=${CITY}/O=${COMPANY}/CN=${COMMON_NAME}" \
+     -addext "subjectAltName = IP:127.0.0.1,DNS:localhost,DNS:${COMMON_NAME}"
 
   # Create a new certificate using our own CA
   openssl x509 -req -sha256 -passin pass:${AUTHORITY_PASSWORD} -days 3650 \

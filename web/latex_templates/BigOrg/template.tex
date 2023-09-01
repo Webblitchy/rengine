@@ -1,0 +1,284 @@
+\documentclass[a4paper,11pt]{book}
+
+\usepackage{array}
+
+% remove parindent
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\title{Pentest Report} % Sets article title
+\author{John Smith} % Sets authors name
+\date{\today} % Sets date for date compiled
+
+\begin{document} 
+\maketitle % creates title using information in preamble (title, author, date)
+
+\section{Show variables}
+
+Organisation name : BigOrg
+
+Organisation description : Multi test
+
+Tests started on : 26 July, 2023\
+
+Testing status : Pentesting
+
+\underline{Domains} :
+
+\begin{itemize}
+    \item Domain number 1
+
+    Domain name : myinternal.domain
+
+    Domain description : Internal Docker address (172.17.0.1)
+    
+        Agent ip : 172.17.0.1
+
+    Domain vulnerabilities : 0
+    
+
+
+        Subdomain name : myinternal.domain
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : myinternal.domain
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : myinternal.domain
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : myinternal.domain
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : myinternal.domain
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : myinternal.domain
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : myinternal.domain
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : myinternal.domain
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : myinternal.domain
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+    
+        \subsection{Opened ports}
+        \begin{tabular}{|p{3cm}|>{\raggedright}p{8cm}|} 
+        \hline
+        Internal IP & Opened Ports \tabularnewline [0.5ex] 
+        \hline
+            192.168.1.104 &
+
+ 
+ 5000(commplex-main)            \tabularnewline
+            \hline
+
+            192.168.1.10 &
+
+ 
+ 22(ssh),  88(kerberos),  445(microsoft-ds),  5000(commplex-main),  5900(rfb),  49152(Custom)            \tabularnewline
+            \hline
+
+            192.168.1.117 &
+
+ 
+ 80(http),  443(https),  5432(postgresql),  8000(irdmi)            \tabularnewline
+            \hline
+
+            192.168.1.1 &
+
+ 
+ 53(domain),  80(http),  443(https),  49152(Custom)            \tabularnewline
+            \hline
+
+            192.168.1.112 &
+
+ 
+ 49152(Custom)            \tabularnewline
+            \hline
+
+            192.168.1.217 &
+
+ 
+ 22(ssh),  53(domain),  80(http),  8080(http-alt)            \tabularnewline
+            \hline
+
+            192.168.1.115 &
+
+ 
+ 22(ssh),  88(kerberos),  445(microsoft-ds),  5000(commplex-main),  5900(rfb),  49152(Custom)            \tabularnewline
+            \hline
+
+            192.168.1.130 &
+
+ 
+ 80(http),  443(https),  515(printer),  631(ipp),  9100(hp-pdl-datastr)            \tabularnewline
+            \hline
+
+            192.168.1.123 &
+
+ 
+ 8008(http-alt),  8009(nvme-disc),  8443(pcsync-https)            \tabularnewline
+            \hline
+
+            192.168.1.116 &
+
+ 
+ 49152(Custom)            \tabularnewline
+            \hline
+
+            192.168.1.120 &
+
+ 
+ 49152(Custom)            \tabularnewline
+            \hline
+
+        \end{tabular}
+
+
+    \item Domain number 2
+
+    Domain name : hackthissite.org
+
+    Domain description : Site pour test de hack
+    
+        Domain ip : None
+
+    Domain vulnerabilities : 0
+    
+
+
+        Subdomain name : hackthissite.org
+
+        Subdomain page title : Hack This Site
+
+        Subdomain type : text/html
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : qdb.hackthissite.org
+
+        Subdomain page title : HackThisSite IRC
+
+        Subdomain type : text/html
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : legal.hackthissite.org
+
+        Subdomain page title : HackThisSite Legal
+
+        Subdomain type : text/html
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : mirror.hackthissite.org
+
+        Subdomain page title : index - powered by h5ai v0.29.2 (https://larsjung.de/h5ai/)
+
+        Subdomain type : text/html
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : mail.hackthissite.org
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+    
+
+
+\end{itemize}
+
+
+% verbatim is just to show special character in latex (not jinja)
+\begin{verbatim} 
+Escape inline : {{
+
+Escape bloc : 
+ 
+{{ this is not interpreted by jinja }}
+
+\end{verbatim}
+
+\end{document}

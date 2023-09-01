@@ -24,7 +24,7 @@ Update Organization
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="row">
             <div class="col-6">
@@ -40,7 +40,7 @@ Update Organization
               <label for="organizationDescription" class="form-label">Description (Optional)</label>
               {{ form.description }}
             </div>
-            <div class="col-12 mt-3">
+            <div class="col-6 mt-3">
               <label for="targets" class="form-label">Select Targets</label>
               {{form.domains}}
               {% if form.errors.domains %}
@@ -50,6 +50,10 @@ Update Organization
                 </p>
               </div>
               {% endif %}
+            </div>
+            <div class="col-6 mt-3">
+              <label for="latexTemplate" class="form-label" style="display: block;">Import latex template</label>
+              {{ form.latex_template }}
             </div>
           </div>
           <button class="btn btn-primary submit-fn mt-2 float-end" type="submit">Update Organization</button>

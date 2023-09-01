@@ -1,0 +1,1430 @@
+port,name,description
+20,ftp-data,FTP
+21,ftp,FTP
+22,ssh,SSH
+63,whoispp,"whois++ IANA assigned this well-formed service name as a replacement for ""whois++""."
+63,whois++,whois++
+63,whoispp,"whois++ IANA assigned this well-formed service name as a replacement for ""whois++""."
+63,whois++,whois++
+66,sql-net,"Oracle SQL*NET IANA assigned this well-formed service name as a replacement for ""sql*net""."
+66,sql*net,Oracle SQL*NET
+66,sql-net,"Oracle SQL*NET IANA assigned this well-formed service name as a replacement for ""sql*net""."
+66,sql*net,Oracle SQL*NET
+80,http,HTTP
+143,imap,Internet Message Access Protocol
+172,cl-1,"Network Innovations CL/1 IANA assigned this well-formed service name as a replacement for ""cl/1""."
+172,cl/1,Network Innovations CL/1
+172,cl-1,"Network Innovations CL/1 IANA assigned this well-formed service name as a replacement for ""cl/1""."
+172,cl/1,Network Innovations CL/1
+179,bgp,BGP
+210,z39-50,"ANSI Z39.50 IANA assigned this well-formed service name as a replacement for ""z39.50""."
+210,z39.50,ANSI Z39.50
+210,z39-50,"ANSI Z39.50 IANA assigned this well-formed service name as a replacement for ""z39.50""."
+210,z39.50,ANSI Z39.50
+211,914c-g,"Texas Instruments 914C/G Terminal IANA assigned this well-formed service name as a replacement for ""914c/g""."
+211,914c/g,Texas Instruments 914C/G Terminal
+211,914c-g,"Texas Instruments 914C/G Terminal IANA assigned this well-formed service name as a replacement for ""914c/g""."
+211,914c/g,Texas Instruments 914C/G Terminal
+247,subntbcst-tftp,"SUBNTBCST_TFTP IANA assigned this well-formed service name as a replacement for ""subntbcst_tftp""."
+247,subntbcst_tftp,SUBNTBCST_TFTP
+247,subntbcst-tftp,"SUBNTBCST_TFTP IANA assigned this well-formed service name as a replacement for ""subntbcst_tftp""."
+247,subntbcst_tftp,SUBNTBCST_TFTP
+270,gist,Q-mode encapsulation for GIST messages
+271,pt-tls,IETF Network Endpoint Assessment (NEA) Posture Transport Protocol over TLS (PT-TLS)
+323,rpki-rtr,Resource PKI to Router Protocol
+324,rpki-rtr-tls,Resource PKI to Router Protocol over TLS
+363,rsvp-tunnel,"RSVP Tunnel IANA assigned this well-formed service name as a replacement for ""rsvp_tunnel""."
+363,rsvp_tunnel,RSVP Tunnel
+363,rsvp-tunnel,"RSVP Tunnel IANA assigned this well-formed service name as a replacement for ""rsvp_tunnel""."
+363,rsvp_tunnel,RSVP Tunnel
+399,iso-tsap-c2,ISO Transport Class 2 Non-Control over TCP
+399,iso-tsap-c2,ISO Transport Class 2 Non-Control over UDP
+428,ocs-cmu,"OCS_CMU IANA assigned this well-formed service name as a replacement for ""ocs_cmu""."
+428,ocs_cmu,OCS_CMU
+428,ocs-cmu,"OCS_CMU IANA assigned this well-formed service name as a replacement for ""ocs_cmu""."
+428,ocs_cmu,OCS_CMU
+429,ocs-amu,"OCS_AMU IANA assigned this well-formed service name as a replacement for ""ocs_amu""."
+429,ocs_amu,OCS_AMU
+429,ocs-amu,"OCS_AMU IANA assigned this well-formed service name as a replacement for ""ocs_amu""."
+429,ocs_amu,OCS_AMU
+442,cvc-hostd,"cvc_hostd IANA assigned this well-formed service name as a replacement for ""cvc_hostd""."
+442,cvc_hostd,cvc_hostd
+442,cvc-hostd,"cvc_hostd IANA assigned this well-formed service name as a replacement for ""cvc_hostd""."
+442,cvc_hostd,cvc_hostd
+443,https,HTTPS
+456,macon-tcp,macon-tcp
+456,macon-udp,macon-udp
+465,urd,URL Rendezvous Directory for SSM
+465,submissions,Message Submission over TLS protocol
+465,igmpv3lite,IGMP over UDP for SSM
+474,tn-tl-w1,tn-tl-w1
+474,tn-tl-w2,tn-tl-w2
+512,exec,remote process execution; authentication performed using passwords and UNIX login names
+512,biff,used by mail system to notify users of new mail received; currently receives messages only from processes on the same machine
+513,login,"remote login a la telnet; automatic authentication performed based on priviledged port numbers and distributed data bases which identify ""authentication domains"""
+513,who,maintains data bases showing who's logged in to machines on a local net and the load average of the machine
+514,shell,"cmd like exec, but automatic authentication is performed as for login server"
+520,efs,extended file name server
+520,router,local routing process (on site); uses variant of Xerox NS routing information protocol - RIP
+623,oob-ws-http,DMTF out-of-band web services management protocol
+623,asf-rmcp,ASF Remote Management and Control Protocol
+625,dec-dlm,"DEC DLM IANA assigned this well-formed service name as a replacement for ""dec_dlm""."
+625,dec_dlm,DEC DLM
+625,dec-dlm,"DEC DLM IANA assigned this well-formed service name as a replacement for ""dec_dlm""."
+625,dec_dlm,DEC DLM
+631,ipps,Internet Printing Protocol over HTTPS
+664,oob-ws-https,DMTF out-of-band secure web services management protocol
+664,asf-secure-rmcp,ASF Secure Remote Management and Control Protocol
+716,pana,PANA Messages
+750,kerberos-iv,kerberos version iv
+774,acmaint-dbd,"IANA assigned this well-formed service name as a replacement for ""acmaint_dbd""."
+775,acmaint-transd,"IANA assigned this well-formed service name as a replacement for ""acmaint_transd""."
+810,fcp-udp,FCP
+810,fcp-udp,FCP Datagram
+853,domain-s,DNS query-response protocol run over TLS
+853,domain-s,DNS query-response protocol run over DTLS or QUIC
+861,owamp-control,OWAMP-Control
+861,owamp-test,OWAMP-Test
+862,twamp-control,TWAMP-Control
+862,twamp-test,TWAMP-Test Receiver Port
+887,iclcnet-svinfo,"ICL coNETion server info IANA assigned this well-formed service name as a replacement for ""iclcnet_svinfo""."
+887,iclcnet_svinfo,ICL coNETion server info
+887,iclcnet-svinfo,"ICL coNETion server info IANA assigned this well-formed service name as a replacement for ""iclcnet_svinfo""."
+887,iclcnet_svinfo,ICL coNETion server info
+888,cddbp,CD Database Protocol
+902,ideafarm-door,self documenting Telnet Door
+902,ideafarm-door,self documenting Door: send 0x00 for info
+903,ideafarm-panic,self documenting Telnet Panic Door
+903,ideafarm-panic,self documenting Panic Door: send 0x00 for info
+914,rift-lies,"Routing in Fat Trees Link Information Elements (TEMPORARY - registered 2023-02-17, expires 2024-02-17)"
+915,rift-ties,"Routing in Fat Trees Topology Information Elements (TEMPORARY - registered 2023-02-17, expires 2024-02-17)"
+953,rndc,BIND9 remote name daemon controller
+993,imaps,IMAP over TLS protocol
+995,pop3s,POP3 over TLS protocol
+995,pop3s,pop3 protocol over TLS/SSL (was spop3)
+999,applix,Applix ac
+1001,webpush,HTTP Web Push
+1027,6a44,IPv6 Behind NAT44 CPEs
+1067,instl-boots,"Installation Bootstrap Proto. Serv. IANA assigned this well-formed service name as a replacement for ""instl_boots""."
+1067,instl_boots,Installation Bootstrap Proto. Serv.
+1067,instl-boots,"Installation Bootstrap Proto. Serv. IANA assigned this well-formed service name as a replacement for ""instl_boots""."
+1067,instl_boots,Installation Bootstrap Proto. Serv.
+1068,instl-bootc,"Installation Bootstrap Proto. Cli. IANA assigned this well-formed service name as a replacement for ""instl_bootc""."
+1068,instl_bootc,Installation Bootstrap Proto. Cli.
+1068,instl-bootc,"Installation Bootstrap Proto. Cli. IANA assigned this well-formed service name as a replacement for ""instl_bootc""."
+1068,instl_bootc,Installation Bootstrap Proto. Cli.
+1110,webadmstart,Start web admin server
+1110,nfsd-keepalive,Client status info
+1138,encrypted-admin,"encrypted admin requests IANA assigned this well-formed service name as a replacement for ""encrypted_admin""."
+1138,encrypted_admin,encrypted admin requests
+1138,encrypted-admin,"encrypted admin requests IANA assigned this well-formed service name as a replacement for ""encrypted_admin""."
+1138,encrypted_admin,encrypted admin requests
+1182,accelenet,AcceleNet Control
+1182,accelenet-data,AcceleNet Data
+1313,bmc-patroldb,"BMC_PATROLDB IANA assigned this well-formed service name as a replacement for ""bmc_patroldb""."
+1313,bmc_patroldb,BMC_PATROLDB
+1313,bmc-patroldb,"BMC_PATROLDB IANA assigned this well-formed service name as a replacement for ""bmc_patroldb""."
+1313,bmc_patroldb,BMC_PATROLDB
+1382,udt-os,"udt_os IANA assigned this well-formed service name as a replacement for ""udt_os""."
+1382,udt_os,udt_os
+1382,udt-os,"udt_os IANA assigned this well-formed service name as a replacement for ""udt_os""."
+1382,udt_os,udt_os
+1385,atex-elmd,"Atex Publishing License Manager IANA assigned this well-formed service name as a replacement for ""atex_elmd""."
+1385,atex_elmd,Atex Publishing License Manager
+1385,atex-elmd,"Atex Publishing License Manager IANA assigned this well-formed service name as a replacement for ""atex_elmd""."
+1385,atex_elmd,Atex Publishing License Manager
+1407,tibet-server,TIBET Data Server
+1416,novell-lu6-2,"Novell LU6.2 IANA assigned this well-formed service name as a replacement for ""novell-lu6.2""."
+1416,novell-lu6.2,Novell LU6.2
+1416,novell-lu6-2,"Novell LU6.2 IANA assigned this well-formed service name as a replacement for ""novell-lu6.2""."
+1416,novell-lu6.2,Novell LU6.2
+1454,interhdl-elmd,"interHDL License Manager IANA assigned this well-formed service name as a replacement for ""interhdl_elmd""."
+1454,interhdl_elmd,interHDL License Manager
+1454,interhdl-elmd,"interHDL License Manager IANA assigned this well-formed service name as a replacement for ""interhdl_elmd""."
+1454,interhdl_elmd,interHDL License Manager
+1461,ibm-wrless-lan,"IBM Wireless LAN IANA assigned this well-formed service name as a replacement for ""ibm_wrless_lan""."
+1461,ibm_wrless_lan,IBM Wireless LAN
+1461,ibm-wrless-lan,"IBM Wireless LAN IANA assigned this well-formed service name as a replacement for ""ibm_wrless_lan""."
+1461,ibm_wrless_lan,IBM Wireless LAN
+1464,msl-lmd,"MSL License Manager IANA assigned this well-formed service name as a replacement for ""msl_lmd""."
+1464,msl_lmd,MSL License Manager
+1464,msl-lmd,"MSL License Manager IANA assigned this well-formed service name as a replacement for ""msl_lmd""."
+1464,msl_lmd,MSL License Manager
+1486,nms-topo-serv,"nms_topo_serv IANA assigned this well-formed service name as a replacement for ""nms_topo_serv""."
+1486,nms_topo_serv,nms_topo_serv
+1486,nms-topo-serv,"nms_topo_serv IANA assigned this well-formed service name as a replacement for ""nms_topo_serv""."
+1486,nms_topo_serv,nms_topo_serv
+1493,netmap-lm,"netmap_lm IANA assigned this well-formed service name as a replacement for ""netmap_lm""."
+1493,netmap_lm,netmap_lm
+1493,netmap-lm,"netmap_lm IANA assigned this well-formed service name as a replacement for ""netmap_lm""."
+1493,netmap_lm,netmap_lm
+1549,shivahose,Shiva Hose
+1549,shivasound,Shiva Sound
+1556,veritas-pbx,"VERITAS Private Branch Exchange IANA assigned this well-formed service name as a replacement for ""veritas_pbx""."
+1556,veritas_pbx,VERITAS Private Branch Exchange
+1556,veritas-pbx,"VERITAS Private Branch Exchange IANA assigned this well-formed service name as a replacement for ""veritas_pbx""."
+1556,veritas_pbx,VERITAS Private Branch Exchange
+1580,tn-tl-r1,tn-tl-r1
+1580,tn-tl-r2,tn-tl-r2
+1587,pra-elmd,"pra_elmd IANA assigned this well-formed service name as a replacement for ""pra_elmd""."
+1587,pra_elmd,pra_elmd
+1587,pra-elmd,"pra_elmd IANA assigned this well-formed service name as a replacement for ""pra_elmd""."
+1587,pra_elmd,pra_elmd
+1596,radio-sm,radio-sm
+1596,radio-bc,radio-bc
+1650,nkd,nkdn
+1650,nkd,nkd
+1651,shiva-confsrvr,"shiva_confsrvr IANA assigned this well-formed service name as a replacement for ""shiva_confsrvr""."
+1651,shiva_confsrvr,shiva_confsrvr
+1651,shiva-confsrvr,"shiva_confsrvr IANA assigned this well-formed service name as a replacement for ""shiva_confsrvr""."
+1651,shiva_confsrvr,shiva_confsrvr
+1676,netcomm1,netcomm1
+1676,netcomm2,netcomm2
+1720,h323hostcall,H.323 Call Control
+1753,predatar-comms,Predatar Comms Service
+1775,vdab,data interchange between visual processing containers
+1783,,"Decomissioned Port 04/14/00, ms"
+1935,macromedia-fcs,Macromedia Flash Communications Server MX
+1935,macromedia-fcs,Macromedia Flash Communications server MX
+2000,cisco-sccp,Cisco SCCP
+2000,cisco-sccp,Cisco SCCp
+2001,wizard,curry
+2004,emce,CCWS mm conf
+2006,raid-cd,raid
+2010,pipe-server,"IANA assigned this well-formed service name as a replacement for ""pipe_server""."
+2011,raid-cc,raid
+2049,nfs,Network File System
+2187,ssmc,Sepehr System Management Control
+2187,ssmd,Sepehr System Management Data
+2188,radware-rpm,Radware Resource Pool Manager
+2189,radware-rpm-s,Secure Radware Resource Pool Manager
+2221,ethernet-ip-s,EtherNet/IP over TLS
+2221,ethernet-ip-s,EtherNet/IP over DTLS
+2222,EtherNet-IP-1,"EtherNet/IP I/O IANA assigned this well-formed service name as a replacement for ""EtherNet/IP-1""."
+2222,EtherNet/IP-1,EtherNet/IP I/O
+2222,EtherNet-IP-1,"EtherNet/IP I/O IANA assigned this well-formed service name as a replacement for ""EtherNet/IP-1""."
+2222,EtherNet/IP-1,EtherNet/IP I/O
+2266,mfserver,M-Files Server
+2266,mfserver,M-files Server
+2340,wrs-registry,"WRS Registry IANA assigned this well-formed service name as a replacement for ""wrs_registry""."
+2340,wrs_registry,WRS Registry
+2340,wrs-registry,"WRS Registry IANA assigned this well-formed service name as a replacement for ""wrs_registry""."
+2340,wrs_registry,WRS Registry
+2346,redstorm-join,"Game Connection Port IANA assigned this well-formed service name as a replacement for ""redstorm_join""."
+2346,redstorm_join,Game Connection Port
+2346,redstorm-join,"Game Connection Port IANA assigned this well-formed service name as a replacement for ""redstorm_join""."
+2346,redstorm_join,Game Connection Port
+2347,redstorm-find,"Game Announcement and Location IANA assigned this well-formed service name as a replacement for ""redstorm_find""."
+2347,redstorm_find,Game Announcement and Location
+2347,redstorm-find,"Game Announcement and Location IANA assigned this well-formed service name as a replacement for ""redstorm_find""."
+2347,redstorm_find,Game Announcement and Location
+2348,redstorm-info,"Information to query for game status IANA assigned this well-formed service name as a replacement for ""redstorm_info""."
+2348,redstorm_info,Information to query for game status
+2348,redstorm-info,"Information to query for game status IANA assigned this well-formed service name as a replacement for ""redstorm_info""."
+2348,redstorm_info,Information to query for game status
+2349,redstorm-diag,"Diagnostics Port IANA assigned this well-formed service name as a replacement for ""redstorm_diag""."
+2349,redstorm_diag,Diagnostics Port
+2349,redstorm-diag,"Diagnostics Port IANA assigned this well-formed service name as a replacement for ""redstorm_diag""."
+2349,redstorm_diag,Diagnostics Port
+2371,rda,Remote Device Access
+2373,remographlm,Remograph License Manager
+2374,hydra,Hydra RPC
+2375,docker,Docker REST API (plain text)
+2376,docker-s,Docker REST API (ssl)
+2377,swarm,RPC interface for Docker Swarm
+2378,dali,DALI lighting control
+2379,etcd-client,etcd client communication
+2380,etcd-server,etcd server to server communication
+2384,sd-request,SD-REQUEST
+2384,sd-capacity,SD-CAPACITY
+2395,lan900-remote,"LAN900 Remote IANA assigned this well-formed service name as a replacement for ""lan900_remote""."
+2395,lan900_remote,LAN900 Remote
+2395,lan900-remote,"LAN900 Remote IANA assigned this well-formed service name as a replacement for ""lan900_remote""."
+2395,lan900_remote,LAN900 Remote
+2408,railgun-webaccl,CloudFlare Railgun Web Acceleration Protocol
+2446,bues-service,"bues_service IANA assigned this well-formed service name as a replacement for ""bues_service""."
+2446,bues_service,bues_service
+2446,bues-service,"bues_service IANA assigned this well-formed service name as a replacement for ""bues_service""."
+2446,bues_service,bues_service
+2528,ncr-ccl,"NCR CCL IANA assigned this well-formed service name as a replacement for ""ncr_ccl""."
+2528,ncr_ccl,NCR CCL
+2528,ncr-ccl,"NCR CCL IANA assigned this well-formed service name as a replacement for ""ncr_ccl""."
+2528,ncr_ccl,NCR CCL
+2654,corel-vncadmin,"Corel VNC Admin IANA assigned this well-formed service name as a replacement for ""corel_vncadmin""."
+2654,corel_vncadmin,Corel VNC Admin
+2654,corel-vncadmin,"Corel VNC Admin IANA assigned this well-formed service name as a replacement for ""corel_vncadmin""."
+2654,corel_vncadmin,Corel VNC Admin
+2802,veritas-tcp1,Veritas TCP1
+2802,veritas-udp1,Veritas UDP1
+2824,cqg-netlan-1,CQG Net/LAN 1
+2824,cqg-netlan-1,CQG Net/Lan 1
+2855,msrp,MSRP over TCP
+2916,elvin-server,"Elvin Server IANA assigned this well-formed service name as a replacement for ""elvin_server""."
+2916,elvin_server,Elvin Server
+2916,elvin-server,"Elvin Server IANA assigned this well-formed service name as a replacement for ""elvin_server""."
+2916,elvin_server,Elvin Server
+2917,elvin-client,"Elvin Client IANA assigned this well-formed service name as a replacement for ""elvin_client""."
+2917,elvin_client,Elvin Client
+2917,elvin-client,"Elvin Client IANA assigned this well-formed service name as a replacement for ""elvin_client""."
+2917,elvin_client,Elvin Client
+2944,megaco-h248,Megaco-H.248 text
+2945,h248-binary,Megaco/H.248 binary
+3001,origo-native,OrigoDB Server Native Interface
+3010,gw,Telerate Workstation
+3010,ping-pong,Telerate Workstation
+3014,broker-service,"Broker Service IANA assigned this well-formed service name as a replacement for ""broker_service""."
+3014,broker_service,Broker Service
+3014,broker-service,"Broker Service IANA assigned this well-formed service name as a replacement for ""broker_service""."
+3014,broker_service,Broker Service
+3016,notify-srvr,"Notify Server IANA assigned this well-formed service name as a replacement for ""notify_srvr""."
+3016,notify_srvr,Notify Server
+3016,notify-srvr,"Notify Server IANA assigned this well-formed service name as a replacement for ""notify_srvr""."
+3016,notify_srvr,Notify Server
+3017,event-listener,"Event Listener IANA assigned this well-formed service name as a replacement for ""event_listener""."
+3017,event_listener,Event Listener
+3017,event-listener,"Event Listener IANA assigned this well-formed service name as a replacement for ""event_listener""."
+3017,event_listener,Event Listener
+3018,srvc-registry,"Service Registry IANA assigned this well-formed service name as a replacement for ""srvc_registry""."
+3018,srvc_registry,Service Registry
+3018,srvc-registry,"Service Registry IANA assigned this well-formed service name as a replacement for ""srvc_registry""."
+3018,srvc_registry,Service Registry
+3019,resource-mgr,"Resource Manager IANA assigned this well-formed service name as a replacement for ""resource_mgr""."
+3019,resource_mgr,Resource Manager
+3019,resource-mgr,"Resource Manager IANA assigned this well-formed service name as a replacement for ""resource_mgr""."
+3019,resource_mgr,Resource Manager
+3024,nds-sso,"NDS_SSO IANA assigned this well-formed service name as a replacement for ""nds_sso""."
+3024,nds_sso,NDS_SSO
+3024,nds-sso,"NDS_SSO IANA assigned this well-formed service name as a replacement for ""nds_sso""."
+3024,nds_sso,NDS_SSO
+3027,LiebDevMgmt-C,"LiebDevMgmt_C IANA assigned this well-formed service name as a replacement for ""LiebDevMgmt_C""."
+3027,LiebDevMgmt_C,LiebDevMgmt_C
+3027,LiebDevMgmt-C,"LiebDevMgmt_C IANA assigned this well-formed service name as a replacement for ""LiebDevMgmt_C""."
+3027,LiebDevMgmt_C,LiebDevMgmt_C
+3028,LiebDevMgmt-DM,"LiebDevMgmt_DM IANA assigned this well-formed service name as a replacement for ""LiebDevMgmt_DM""."
+3028,LiebDevMgmt_DM,LiebDevMgmt_DM
+3028,LiebDevMgmt-DM,"LiebDevMgmt_DM IANA assigned this well-formed service name as a replacement for ""LiebDevMgmt_DM""."
+3028,LiebDevMgmt_DM,LiebDevMgmt_DM
+3029,LiebDevMgmt-A,"LiebDevMgmt_A IANA assigned this well-formed service name as a replacement for ""LiebDevMgmt_A""."
+3029,LiebDevMgmt_A,LiebDevMgmt_A
+3029,LiebDevMgmt-A,"LiebDevMgmt_A IANA assigned this well-formed service name as a replacement for ""LiebDevMgmt_A""."
+3029,LiebDevMgmt_A,LiebDevMgmt_A
+3050,gds-db,"gds_db IANA assigned this well-formed service name as a replacement for ""gds_db""."
+3050,gds_db,gds_db
+3050,gds-db,"gds_db IANA assigned this well-formed service name as a replacement for ""gds_db""."
+3050,gds_db,gds_db
+3071,xplat-replicate,Crossplatform replication protocol
+3080,stm-pproc,"stm_pproc IANA assigned this well-formed service name as a replacement for ""stm_pproc""."
+3080,stm_pproc,stm_pproc
+3080,stm-pproc,"stm_pproc IANA assigned this well-formed service name as a replacement for ""stm_pproc""."
+3080,stm_pproc,stm_pproc
+3097,itu-bicc-stc,ITU-T Q.1902.1/Q.2150.3
+3104,autocuelog,Autocue Logger Protocol
+3104,autocuetime,Autocue Time Service
+3121,pcmk-remote,The pacemaker remote (pcmk-remote) service extends high availability functionality outside of the Linux cluster into remote nodes.
+3235,mdap-port,MDAP port
+3235,mdap-port,MDAP Port
+3300,ceph,Ceph monitor
+3322-3325,active-net,Active Networks
+3367-3371,satvid-datalnk,Satellite Video Data Link
+3384,hp-clic,Cluster Management Services
+3384,hp-clic,Hardware Management
+3386,gprs-data,GPRS Data
+3386,gprs-sig,GPRS SIG
+3396,printer-agent,"Printer Agent IANA assigned this well-formed service name as a replacement for ""printer_agent""."
+3396,printer_agent,Printer Agent
+3396,printer-agent,"Printer Agent IANA assigned this well-formed service name as a replacement for ""printer_agent""."
+3396,printer_agent,Printer Agent
+3419,softaudit,Isogon SoftAudit
+3419,softaudit,ISogon SoftAudit
+3478,turn,TURN over TCP
+3478,turn,TURN over UDP
+3478,stun-behavior,STUN Behavior Discovery over TCP
+3478,stun-behavior,STUN Behavior Discovery over UDP
+3487,ltctcp,LISA TCP Transfer Channel
+3487,ltcudp,LISA UDP Transfer Channel
+3519,nvmsgd,Netvion Messenger Port
+3519,galileo,Netvion Galileo Port
+3566,quest-data-hub,Quest Data Hub
+3574,dmaf-server,DMAF Server
+3574,dmaf-caster,DMAF Caster
+3666,eserver-pap,IBM eServer PAP
+3666,eserver-pap,IBM EServer PAP
+3693,easl,Emergency Automatic Structure Lockdown System
+3737,xpanel,XPanel Daemon
+3760,adtempusclient,adTempus Client
+3760,adtempusclient,adTEmpus Client
+3766,sitewatch-s,SSL e-watch sitewatch server
+3841,shiprush-db-svr,ShipRush Database Server
+3863,asap-tcp,asap tcp port
+3863,asap-udp,asap udp port
+3863,asap-sctp,asap sctp
+3864,asap-tcp-tls,asap/tls tcp port
+3864,asap-sctp-tls,asap-sctp/tls
+3876,dl-agent,"DirectoryLockdown Agent IANA assigned this well-formed service name as a replacement for ""dl_agent""."
+3876,dl_agent,DirectoryLockdown Agent
+3876,dl-agent,"DirectoryLockdown Agent IANA assigned this well-formed service name as a replacement for ""dl_agent""."
+3876,dl_agent,DirectoryLockdown Agent
+3900,udt-os,"Unidata UDT OS IANA assigned this well-formed service name as a replacement for ""udt_os""."
+3900,udt_os,Unidata UDT OS
+3900,udt-os,"Unidata UDT OS IANA assigned this well-formed service name as a replacement for ""udt_os""."
+3900,udt_os,Unidata UDT OS
+3924,mpl-gprs-port,MPL_GPRS_PORT
+3924,mpl-gprs-port,MPL_GPRS_Port
+3938,dbcontrol-agent,"Oracle dbControl Agent po IANA assigned this well-formed service name as a replacement for ""dbcontrol_agent""."
+3938,dbcontrol_agent,Oracle dbControl Agent po
+3938,dbcontrol-agent,"Oracle dbControl Agent po IANA assigned this well-formed service name as a replacement for ""dbcontrol_agent""."
+3938,dbcontrol_agent,Oracle dbControl Agent po
+3986,mapper-ws-ethd,"MAPPER workstation server IANA assigned this well-formed service name as a replacement for ""mapper-ws_ethd""."
+3986,mapper-ws_ethd,MAPPER workstation server
+3986,mapper-ws-ethd,"MAPPER workstation server IANA assigned this well-formed service name as a replacement for ""mapper-ws_ethd""."
+3986,mapper-ws_ethd,MAPPER workstation server
+4060,dsmeter-iatc,"DSMETER Inter-Agent Transfer Channel IANA assigned this well-formed service name as a replacement for ""dsmeter_iatc""."
+4060,dsmeter_iatc,DSMETER Inter-Agent Transfer Channel
+4060,dsmeter-iatc,"DSMETER Inter-Agent Transfer Channel IANA assigned this well-formed service name as a replacement for ""dsmeter_iatc""."
+4060,dsmeter_iatc,DSMETER Inter-Agent Transfer Channel
+4065,avanti-cdp,"Avanti Common Data IANA assigned this well-formed service name as a replacement for ""avanti_cdp""."
+4065,avanti_cdp,Avanti Common Data
+4065,avanti-cdp,"Avanti Common Data IANA assigned this well-formed service name as a replacement for ""avanti_cdp""."
+4065,avanti_cdp,Avanti Common Data
+4077,ascomalarm,Ascom IP Alarming
+4078,cssp,Coordinated Security Service Protocol
+4084,fortisphere-vm,Fortisphere VM Service
+4085,ezmessagesrv,EZNews Newsroom Message Service
+4086,ftsync,Firewall/NAT state table synchronization
+4087,applusservice,APplus Service
+4088,npsp,Noah Printing Service Protocol
+4120,minirem,MiniRem Remote Telemetry and Control
+4132,nuts-dem,"NUTS Daemon IANA assigned this well-formed service name as a replacement for ""nuts_dem""."
+4132,nuts_dem,NUTS Daemon
+4132,nuts-dem,"NUTS Daemon IANA assigned this well-formed service name as a replacement for ""nuts_dem""."
+4132,nuts_dem,NUTS Daemon
+4133,nuts-bootp,"NUTS Bootp Server IANA assigned this well-formed service name as a replacement for ""nuts_bootp""."
+4133,nuts_bootp,NUTS Bootp Server
+4133,nuts-bootp,"NUTS Bootp Server IANA assigned this well-formed service name as a replacement for ""nuts_bootp""."
+4133,nuts_bootp,NUTS Bootp Server
+4140,cedros-fds,"Cedros Fraud Detection System IANA assigned this well-formed service name as a replacement for ""cedros_fds""."
+4140,cedros_fds,Cedros Fraud Detection System
+4140,cedros-fds,"Cedros Fraud Detection System IANA assigned this well-formed service name as a replacement for ""cedros_fds""."
+4140,cedros_fds,Cedros Fraud Detection System
+4151,menandmice-noh,"Men & Mice Remote Control IANA assigned this well-formed service name as a replacement for ""menandmice_noh""."
+4151,menandmice_noh,Men & Mice Remote Control
+4151,menandmice-noh,"Men & Mice Remote Control IANA assigned this well-formed service name as a replacement for ""menandmice_noh""."
+4151,menandmice_noh,Men & Mice Remote Control
+4152,idig-mux,"iDigTech Multiplex IANA assigned this well-formed service name as a replacement for ""idig_mux""."
+4152,idig_mux,iDigTech Multiplex
+4152,idig-mux,"iDigTech Multiplex IANA assigned this well-formed service name as a replacement for ""idig_mux""."
+4152,idig_mux,iDigTech Multiplex
+4169,iadt,Automation Drive Interface Transport
+4169,iadt-disc,Internet ADT Discovery Protocol
+4170,d-cinema-csp,SMPTE Content Synchonization Protocol
+4171,ml-svnet,Maxlogic Supervisor Communication
+4173,mma-discovery,MMA Device Discovery
+4174,smcluster,StorMagic Cluster Services
+4174,sm-disc,StorMagic Discovery
+4175,bccp,Brocade Cluster Communication Protocol
+4176,tl-ipcproxy,Translattice Cluster IPC Proxy
+4184,universe-suite,"UNIVERSE SUITE MESSAGE SERVICE IANA assigned this well-formed service name as a replacement for ""universe_suite""."
+4184,universe_suite,UNIVERSE SUITE MESSAGE SERVICE
+4184,universe-suite,"UNIVERSE SUITE MESSAGE SERVICE IANA assigned this well-formed service name as a replacement for ""universe_suite""."
+4184,universe_suite,UNIVERSE SUITE MESSAGE SERVICE
+4186,boxbackupstore,Box Backup Store Service
+4187,csc-proxy,"Cascade Proxy IANA assigned this well-formed service name as a replacement for ""csc_proxy""."
+4187,csc_proxy,Cascade Proxy
+4189,pcep,Path Computation Element Communication Protocol
+4190,sieve,ManageSieve Protocol
+4191,dsmipv6,Dual Stack MIPv6 NAT Traversal
+4192,azeti,Azeti Agent Service
+4192,azeti-bd,azeti blinddate
+4193,pvxplusio,PxPlus remote file srvr
+4194,spdm,Security Protocol and Data Model
+4200-4299,vrml-multi-use,VRML Multi User Systems
+4311,p6ssmc,P6R Secure Server Management Console
+4312,pscl-mgt,Parascale Membership Manager
+4313,perrla,PERRLA User Services
+4314,choiceview-agt,ChoiceView Agent
+4316,choiceview-clt,ChoiceView Client
+4317,opentelemetry,OpenTelemetry Protocol
+4325,geognosisadmin,Cadcorp GeognoSIS Administrator
+4325,geognosisman,Cadcorp GeognoSIS Administrator
+4329,publiqare-sync,PubliQare Distributed Environment Synchronisation Engine
+4330,dey-sapi,DEY Storage Administration REST API
+4331,ktickets-rest,ktickets REST API for event management and ticketing systems (embedded POS devices)
+4332,getty-focus,Getty Images FOCUS service
+4334,netconf-ch-ssh,NETCONF Call Home (SSH)
+4335,netconf-ch-tls,NETCONF Call Home (TLS)
+4336,restconf-ch-tls,RESTCONF Call Home (TLS)
+4341,lisp-data,LISP Data Packets
+4342,lisp-control,LISP Control Packets
+4360,matrix-vnet,"Matrix VNet Communication Protocol IANA assigned this well-formed service name as a replacement for ""matrix_vnet""."
+4360,matrix_vnet,Matrix VNet Communication Protocol
+4361,nacnl,NavCom Discovery and Control Port
+4362,afore-vdp-disc,AFORE vNode Discovery protocol
+4366,shadowstream,ShadowStream System
+4370,elpro-tunnel,"ELPRO V2 Protocol Tunnel IANA assigned this well-formed service name as a replacement for ""elpro_tunnel""."
+4370,elpro_tunnel,ELPRO V2 Protocol Tunnel
+4370,elpro-tunnel,"ELPRO V2 Protocol Tunnel IANA assigned this well-formed service name as a replacement for ""elpro_tunnel""."
+4370,elpro_tunnel,ELPRO V2 Protocol Tunnel
+4371,l2c-control,LAN2CAN Control
+4371,l2c-disc,LAN2CAN Discovery
+4374,psi-ptt,PSI Push-to-Talk Protocol
+4391,apwi-imserver,American Printware IMServer Protocol
+4392,apwi-rxserver,American Printware RXServer Protocol
+4393,apwi-rxspooler,American Printware RXSpooler Protocol
+4394,apwi-disc,American Printware Discovery
+4396,fly,Fly Object Space
+4407,nacagent,Network Access Control Agent
+4408,slscc,SLS Technology Control Centre
+4409,netcabinet-com,Net-Cabinet comunication
+4410,itwo-server,RIB iTWO Application Server
+4411,found,Found Messaging Protocol
+4412,smallchat,SmallChat
+4413,avi-nms,AVI Systems NMS
+4413,avi-nms-disc,AVI Systems NMS
+4414,updog,Updog Monitoring and Status Framework
+4415,brcd-vr-req,Brocade Virtual Router Request
+4416,pjj-player,PJJ Media Player
+4416,pjj-player-disc,PJJ Media Player discovery
+4417,workflowdir,Workflow Director Communication
+4418,axysbridge,AXYS communication protocol
+4419,cbp,Colnod Binary Protocol
+4421,scaleft,Multi-Platform Remote Management for Cloud Infrastructure
+4422,tsepisp,TSEP Installation Service Protocol
+4423,thingkit,thingkit secure mesh
+4427,drizzle,Drizzle database server
+4428,omviserver,OMV-Investigation Server-Client
+4429,omviagent,OMV Investigation Agent-Server
+4431,wspipe,adWISE Pipe
+4433,vop,Versile Object Protocol
+4441,netblox,Netblox Protocol
+4460,ntske,Network Time Security Key Establishment
+4485,assyst-dr,Assyst Data Repository Service
+4487,prex-tcp,Protocol for Remote Execution over TCP
+4502,a25-fap-fgw,A25 (FAP-FGW)
+4534,armagetronad,Armagetron Advanced Game Server
+4553,icshostsvc,ICS host services
+4556,dtn-bundle,DTN Bundle TCP CL Protocol
+4556,dtn-bundle,DTN Bundle UDP CL Protocol
+4556,dtn-bundle,DTN Bundle DCCP CL Protocol
+4557,mtcevrunqss,Marathon everRun Quorum Service Server
+4558,mtcevrunqman,Marathon everRun Quorum Service Manager
+4563,amahi-anywhere,Amahi Anywhere
+4570,deploymentmap,Service to distribute and update within a site deployment information for Oracle Communications Suite
+4573,cardifftec-back,A port for communication between a server and client for a custom backup system
+4590,rid,RID over HTTP/TLS
+4592,hrpd-ith-at-an,HRPD-ITH (AT-AN)
+4602,mtsserver,EAX MTS Server
+4603,menandmice-upg,Men & Mice Upgrade Agent
+4604,irp,Identity Registration Protocol
+4605,sixchat,Direct End to End Secure Chat Protocol
+4606,sixid,Secure ID to IP registration and lookup
+4621,ventoso,Bidirectional single port remote radio VOIP and Control stream
+4703,npqes-test,Network Performance Quality Evaluation System Test Service
+4704,assuria-ins,Assuria Insider
+4726,a26-fap-fgw,A26 (FAP-FGW)
+4727,fcis,F-Link Client Information Service
+4727,fcis-disc,F-Link Client Information Service Discovery
+4729,gsmtap,GSM Interface Tap
+4731,remcap,Remote Capture Protocol
+4732,ohmtrigger,OHM server trigger
+4733,resorcs,RES Orchestration Catalog Services
+4740,ipfixs,ipfix protocol over TLS
+4742,sicct,SICCT
+4742,sicct-sdp,SICCT Service Discovery Protocol
+4746,intelliadm-disc,IntelliAdmin Discovery
+4747,buschtrommel,peer-to-peer file exchange protocol
+4753,simon,Simple Invocation of Methods Over Network (SIMON)
+4753,simon-disc,Simple Invocation of Methods Over Network (SIMON) Discovery
+4754,gre-in-udp,GRE-in-UDP Encapsulation
+4755,gre-udp-dtls,GRE-in-UDP Encapsulation with DTLS
+4756,RDCenter,Reticle Decision Center
+4774,converge,Converge RPC
+4785,cncp,Cisco Nexus Control Protocol
+4786,smart-install,Smart Install Service
+4787,sia-ctrl-plane,Service Insertion Architecture (SIA) Control-Plane
+4788,xmcp,eXtensible Messaging Client Protocol
+4789,vxlan,Virtual eXtensible Local Area Network (VXLAN)
+4790,vxlan-gpe,Generic Protocol Extension for Virtual eXtensible Local Area Network (VXLAN)
+4791,roce,IP Routable RocE
+4803,notateit,Notateit Messaging
+4803,notateit-disc,Notateit Messaging Discovery
+4804,aja-ntv4-disc,AJA ntv4 Video System Discovery
+4840,opcua-tcp,OPC UA Connection Protocol
+4840,opcua-udp,OPC UA Multicast Datagram Protocol
+4846,contamac-icm,"Contamac ICM Service IANA assigned this well-formed service name as a replacement for ""contamac_icm""."
+4846,contamac_icm,Contamac ICM Service
+4846,contamac-icm,"Contamac ICM Service IANA assigned this well-formed service name as a replacement for ""contamac_icm""."
+4846,contamac_icm,Contamac ICM Service
+4878,inst-discovery,Agilent Instrument Discovery
+4879,wsdl-event,WSDL Event Receiver
+4880,hislip,IVI High-Speed LAN Instrument Protocol
+4881,socp-t,SOCP Time Synchronization Protocol
+4882,socp-c,SOCP Control Protocol
+4883,wmlserver,Meier-Phelps License Server
+4888,xcap-portal,xcap code analysis portal public user access
+4889,xcap-control,xcap code analysis portal cluster control and administration
+4901,flr-agent,"FileLocator Remote Search Agent IANA assigned this well-formed service name as a replacement for ""flr_agent""."
+4901,flr_agent,FileLocator Remote Search Agent
+4902,magiccontrol,magicCONROL RF and Data Interface
+4912,lutap,Technicolor LUT Access Protocol
+4913,lutcp,LUTher Control Protocol
+4915,frcs,Fibics Remote Control Service
+4936,an-signaling,Signal protocol port for autonomic networking
+4937,atsc-mh-ssc,ATSC-M/H Service Signaling Channel
+4953,dbsyncarbiter,Synchronization Arbiter
+4971,burp,BackUp and Restore Program
+4980,ctxs-vpp,Citrix Virtual Path
+4984,webyast,WebYast
+4985,gerhcs,GER HC Standard
+5003,fmpro-internal,"FileMaker, Inc. - Proprietary transport"
+5003,fmpro-internal,"FileMaker, Inc. - Proprietary name binding"
+5014,onpsocket,Overlay Network Protocol
+5015,fmwp,"FileMaker, Inc. - Web publishing"
+5028,qvr,Quiqum Virtual Relais
+5031,dmp,Direct Message Protocol
+5032,signacert-agent,SignaCert Enterprise Trust Server Agent
+5033,jtnetd-server,Janstor Secure Data
+5034,jtnetd-status,Janstor Status
+5045,osp,Open Settlement Protocol
+5046,vpm-udp,Vishay PM UDP Service
+5047,iscape,iSCAPE Data Broadcasting
+5048,texai,Texai Message Service
+5053,rlm,RLM License Server
+5053,rlm-disc,RLM Discovery Server
+5054,rlm-admin,RLM administrative interface
+5058,locus-disc,Locus Discovery
+5063,csrpc,centrify secure RPC
+5068,bitforestsrv,Bitforest Data Service
+5075,pvaccess,Experimental Physics and Industrial Control System
+5078,pixelpusher,PixelPusher pixel data
+5079,cp-spxrpts,Cambridge Pixel SPx Reports
+5086,aprigo-cs,Aprigo Collection Service
+5087,biotic,BIOTIC - Binary Internet of Things Interoperable Communication
+5090,car,Candidate AR
+5091,cxtp,Context Transfer Protocol
+5092,magpie,Magpie Binary
+5101,talarian-tcp,Talarian_TCP
+5101,talarian-udp,Talarian_UDP
+5103,actifio-c2c,Actifio C2C
+5104,tinymessage,TinyMessage
+5105,hughes-ap,Hughes Association Protocol
+5106,actifioudsagent,Actifio UDS Agent
+5107,actifioreplic,Disk to Disk replication between Actifio Clusters
+5114,ev-services,Enterprise Vault Services
+5115,autobuild,Symantec Autobuild Service
+5116,emb-proj-cmd,EPSON Projecter Image Transfer
+5117,gradecam,GradeCam Image Processing
+5134,ppactivation,PP ActivationServer
+5135,erp-scale,ERP-Scale
+5136,minotaur-sa,Minotaur SA
+5145,rmonitor-secure,"RMONITOR SECURE IANA assigned this well-formed service name as a replacement for ""rmonitor_secure""."
+5145,rmonitor_secure,RMONITOR SECURE
+5145,rmonitor-secure,"RMONITOR SECURE IANA assigned this well-formed service name as a replacement for ""rmonitor_secure""."
+5145,rmonitor_secure,RMONITOR SECURE
+5146,social-alarm,Social Alarm Service
+5151,esri-sde,"ESRI SDE Instance IANA assigned this well-formed service name as a replacement for ""esri_sde""."
+5151,esri_sde,ESRI SDE Instance
+5151,esri-sde,"ESRI SDE Remote Start IANA assigned this well-formed service name as a replacement for ""esri_sde""."
+5151,esri_sde,ESRI SDE Remote Start
+5156,rugameonline,Russian Online Game
+5157,mediat,Mediat Remote Object Exchange
+5161,snmpssh,SNMP over SSH Transport Model
+5162,snmpssh-trap,SNMP Notification over SSH Transport Model
+5163,sbackup,Shadow Backup
+5164,vpa,Virtual Protocol Adapter
+5164,vpa-disc,Virtual Protocol Adapter Discovery
+5165,ife-icorp,"ife_1corp IANA assigned this well-formed service name as a replacement for ""ife_icorp""."
+5165,ife_icorp,ife_1corp
+5165,ife-icorp,"ife_1corp IANA assigned this well-formed service name as a replacement for ""ife_icorp""."
+5165,ife_icorp,ife_1corp
+5172,pcoip-mgmt,PC over IP Endpoint Management
+5194,cpscomm,CipherPoint Config Service
+5195,ampl-lic,The protocol is used by a license server and client programs to control use of program licenses that float to networked machines
+5196,ampl-tableproxy,"The protocol is used by two programs that exchange ""table"" data used in the AMPL modeling language"
+5197,tunstall-lwp,Tunstall Lone worker device interface
+5209,nomad,Nomad Device Video Transfer
+5221,3exmp,3eTI Extensible Management Protocol for OAMP
+5222,xmpp-client,XMPP Client Connection
+5228,hpvroom,HP Virtual Room Service
+5229,jaxflow,Netflow/IPFIX/sFlow Collector and Forwarder Management
+5230,jaxflow-data,JaxMP RealFlow application and protocol data
+5231,crusecontrol,Remote Control of Scan Software for Cruse Scanners
+5232,csedaemon,Cruse Scanning System Service
+5233,enfs,Etinnae Network File Service
+5242,attune,ATTUne API
+5243,xycstatus,xyClient Status API and rendevous point
+5245,downtools,DownTools Control Protocol
+5245,downtools-disc,DownTools Discovery Protocol
+5246,capwap-control,CAPWAP Control Protocol
+5247,capwap-data,CAPWAP Data Protocol
+5253,kpdp,Kohler Power Device Protocol
+5254,logcabin,LogCabin storage service
+5269,xmpp-server,XMPP Server Connection
+5271,cuelink,StageSoft CueLink messaging
+5271,cuelink-disc,StageSoft CueLink discovery
+5280,xmpp-bosh,Bidirectional-streams Over Synchronous HTTP (BOSH)
+5281,undo-lm,Undo License Manager
+5316,hpbladems,HPBladeSystem Monitor Service
+5317,hpdevms,HP Device Monitor Service
+5318,pkix-cmc,PKIX Certificate Management using CMS (CMC)
+5320,bsfserver-zn,Webservices-based Zn interface of BSF
+5321,bsfsvr-zn-ssl,Webservices-based Zn interface of BSF over SSL
+5349,stuns,Session Traversal Utilities for NAT (STUN) port
+5349,stuns,STUN over DTLS
+5349,turns,TURN over TLS
+5349,turns,TURN over DTLS
+5349,stun-behaviors,STUN Behavior Discovery over TLS
+5349,stun-behaviors,Reserved for a future enhancement of STUN-BEHAVIOR
+5350,pcp-multicast,Port Control Protocol Multicast
+5351,pcp,Port Control Protocol
+5364,kdnet,Microsoft Kernel Debugger
+5436,pmip6-cntl,pmip6-cntl
+5437,pmip6-data,pmip6-data
+5450,tiepie,TiePie engineering data acquisition
+5450,tiepie-disc,TiePie engineering data acquisition (discovery)
+5470,apsolab-col,The Apsolab company's data collection protocol (native api)
+5471,apsolab-cols,The Apsolab company's secure data collection protocol (native api)
+5472,apsolab-tag,The Apsolab company's dynamic tag protocol
+5473,apsolab-tags,The Apsolab company's secure dynamic tag protocol
+5474,apsolab-rpc,The Apsolab company's status query protocol
+5475,apsolab-data,The Apsolab company's data retrieval protocol
+5507,psl-management,PowerSysLab Electrical Management
+5550,cbus,Model Railway control using the CBUS message protocol
+5557,farenet,Sandlab FARENET
+5565,dp-bura,Data Protector BURA
+5566,westec-connect,Westec Connect
+5569,rdmnet-ctrl,"PLASA E1.33, Remote Device Management (RDM) controller status notifications"
+5569,rdmnet-device,"PLASA E1.33, Remote Device Management (RDM) messages"
+5574,lsi-bobcat,SAS IO Forwarding
+5575,ora-oap,Oracle Access Protocol
+5579,fdtracks,FleetDisplay Tracking Service
+5586,att-mt-sms,Planning to send mobile terminated SMS to the specific port so that the SMS is not visible to the client
+5618,efr,Fiscal Registering Protocol
+5635,sfmsso,SFM Authentication Subsystem
+5636,sfm-db-server,SFMdb - SFM DB server
+5637,cssc,Symantec CSSC
+5638,flcrs,Symantec Fingerprint Lookup and Container Reference Service
+5639,ics,Symantec Integrity Checking Service
+5646,vfmobile,Ventureforth Mobile
+5666,nrpe,Nagios Remote Plugin Executor
+5670,filemq,ZeroMQ file publish-subscribe protocol
+5670,zre-disc,Local area discovery and messaging over ZeroMQ
+5682,brightcore,BrightCore control & data transfer exchange
+5683,coap,Constrained Application Protocol (CoAP)
+5683,coap,Constrained Application Protocol
+5684,coaps,Constrained Application Protocol (CoAP)
+5684,coaps,DTLS-secured CoAP
+5687,gog-multiplayer,GOG multiplayer game protocol
+5693,rbsystem,Robert Bosch Data Transfer
+5696,kmip,Key Management Interoperability Protocol
+5700,supportassist,Dell SupportAssist data center management
+5705,storageos,StorageOS REST API
+5725,ms-ilm,Microsoft Identity Lifecycle Manager
+5726,ms-ilm-sts,Microsoft Lifecycle Manager Secure Token Service
+5727,asgenf,ASG Event Notification Framework
+5728,io-dist-data,Dist. I/O Comm. Service Data and Control
+5728,io-dist-group,Dist. I/O Comm. Service Group Membership
+5780,vts-rpc,Visual Tag System RPC
+5784,ibar,Cisco Interbox Application Redundancy
+5786,cisco-redu,redundancy notification
+5787,waascluster,Cisco WAAS Cluster Protocol
+5794,spdp,Simple Peered Discovery Protocol
+5798,enlabel-dpl,Proprietary Website deployment service
+5820,autopassdaemon,AutoPass licensing
+5841,shiprush-d-ch,Z-firm ShipRush interface for web access and bidirectional data
+5842,reversion,Reversion Backup/Restore
+5868,diameters,Diameter over TLS/TCP
+5868,diameters,Diameter over DTLS/SCTP
+5883,jute,Javascript Unit Test Environment
+5910,cm,Context Management
+5911,cpdlc,Controller Pilot Data Link Communication
+5912,fis,Flight Information Services
+5913,ads-c,Automatic Dependent Surveillance
+5993,cim-rs,DMTF WBEM CIM REST
+5994,rms-agent,RMS Agent Listening Service
+6068,gsmp-ancp,GSMP/ANCP
+6075,dpm-acm,Microsoft DPM Access Control Manager
+6076,msft-dpm-cert,Microsoft DPM WCF Certificates
+6077,iconstructsrv,iConstruct Server
+6080,gue,Generic UDP Encapsulation
+6081,geneve,Generic Network Virtualization Encapsulation (Geneve)
+6082,p25cai,APCO Project 25 Common Air Interface - UDP encapsulation
+6083,miami-bcast,telecomsoftware miami broadcast
+6084,reload-config,Peer to Peer Infrastructure Configuration
+6088,doglms,SuperDog License Manager
+6088,doglms-notify,SuperDog License Manager Notifier
+6099,raxa-mgmt,RAXA Management
+6113,dayliteserver,Daylite Server
+6114,wrspice,WRspice IPC Service
+6115,xic,Xic IPC Service
+6116,xtlserv,XicTools License Manager Service
+6117,daylitetouch,Daylite Touch Sync
+6118,tipc,Transparent Inter Process Communication
+6121,spdy,SPDY for a faster web
+6130,damewaremobgtwy,The DameWare Mobile Gateway Service
+6159,efb-aci,EFB Application Control Interface
+6160,ecmp,Emerson Extensible Control and Management Protocol
+6160,ecmp-data,Emerson Extensible Control and Management Protocol Data
+6201,thermo-calc,Management of service nodes in a processing grid for thermodynamic calculations
+6241,jeol-nsdtp-1,JEOL Network Services Data Transport Protocol 1
+6241,jeol-nsddp-1,JEOL Network Services Dynamic Discovery Protocol 1
+6242,jeol-nsdtp-2,JEOL Network Services Data Transport Protocol 2
+6242,jeol-nsddp-2,JEOL Network Services Dynamic Discovery Protocol 2
+6243,jeol-nsdtp-3,JEOL Network Services Data Transport Protocol 3
+6243,jeol-nsddp-3,JEOL Network Services Dynamic Discovery Protocol 3
+6244,jeol-nsdtp-4,JEOL Network Services Data Transport Protocol 4
+6244,jeol-nsddp-4,JEOL Network Services Dynamic Discovery Protocol 4
+6267,gld,GridLAB-D User Interface
+6301,bmc-ctd-ldap,"BMC CONTROL-D LDAP SERVER IANA assigned this well-formed service name as a replacement for ""bmc_ctd_ldap""."
+6301,bmc_ctd_ldap,BMC CONTROL-D LDAP SERVER
+6301,bmc-ctd-ldap,"BMC CONTROL-D LDAP SERVER IANA assigned this well-formed service name as a replacement for ""bmc_ctd_ldap""."
+6301,bmc_ctd_ldap,BMC CONTROL-D LDAP SERVER
+6315,scup,Sensor Control Unit Protocol
+6315,scup-disc,Sensor Control Unit Protocol Discovery Protocol
+6317,nav-data-cmd,Navtech Radar Sensor Data Command
+6317,nav-data,Navtech Radar Sensor Data
+6324,hrd-ncs,HR Device Network Configuration Service
+6324,hrd-ns-disc,HR Device Network service
+6325,dt-mgmtsvc,Double-Take Management Service
+6326,dt-vra,Double-Take Virtual Recovery Assistant
+6344,streletz,Argus-Spectr security and fire-prevention systems service
+6363,ndn,Named Data Networking
+6379,redis,An advanced key-value cache and store
+6400,boe-cms,Business Objects CMS contact port
+6401,boe-was,boe-was
+6402,boe-eventsrv,boe-eventsrv
+6403,boe-cachesvr,boe-cachesvr
+6404,boe-filesvr,Business Objects Enterprise internal server
+6405,boe-pagesvr,Business Objects Enterprise internal server
+6406,boe-processsvr,Business Objects Enterprise internal server
+6407,boe-resssvr1,Business Objects Enterprise internal server
+6408,boe-resssvr2,Business Objects Enterprise internal server
+6409,boe-resssvr3,Business Objects Enterprise internal server
+6410,boe-resssvr4,Business Objects Enterprise internal server
+6418,syserverremote,SYserver remote commands
+6419,svdrp,Simple VDR Protocol
+6419,svdrp-disc,Simple VDR Protocol Discovery
+6432,pgbouncer,PgBouncer
+6440,heliosd,heliosd daemon
+6442,tarp,Transitory Application Request Protocol
+6444,sge-qmaster,"Grid Engine Qmaster Service IANA assigned this well-formed service name as a replacement for ""sge_qmaster""."
+6444,sge_qmaster,Grid Engine Qmaster Service
+6444,sge-qmaster,"Grid Engine Qmaster Service IANA assigned this well-formed service name as a replacement for ""sge_qmaster""."
+6444,sge_qmaster,Grid Engine Qmaster Service
+6445,sge-execd,"Grid Engine Execution Service IANA assigned this well-formed service name as a replacement for ""sge_execd""."
+6445,sge_execd,Grid Engine Execution Service
+6445,sge-execd,"Grid Engine Execution Service IANA assigned this well-formed service name as a replacement for ""sge_execd""."
+6445,sge_execd,Grid Engine Execution Service
+6501,boks-servc,"BoKS Servc IANA assigned this well-formed service name as a replacement for ""boks_servc""."
+6501,boks_servc,BoKS Servc
+6501,boks-servc,"BoKS Servc IANA assigned this well-formed service name as a replacement for ""boks_servc""."
+6501,boks_servc,BoKS Servc
+6502,boks-servm,"BoKS Servm IANA assigned this well-formed service name as a replacement for ""boks_servm""."
+6502,boks_servm,BoKS Servm
+6502,boks-servm,"BoKS Servm IANA assigned this well-formed service name as a replacement for ""boks_servm""."
+6502,boks_servm,BoKS Servm
+6503,boks-clntd,"BoKS Clntd IANA assigned this well-formed service name as a replacement for ""boks_clntd""."
+6503,boks_clntd,BoKS Clntd
+6503,boks-clntd,"BoKS Clntd IANA assigned this well-formed service name as a replacement for ""boks_clntd""."
+6503,boks_clntd,BoKS Clntd
+6505,badm-priv,"BoKS Admin Private Port IANA assigned this well-formed service name as a replacement for ""badm_priv""."
+6505,badm_priv,BoKS Admin Private Port
+6505,badm-priv,"BoKS Admin Private Port IANA assigned this well-formed service name as a replacement for ""badm_priv""."
+6505,badm_priv,BoKS Admin Private Port
+6506,badm-pub,"BoKS Admin Public Port IANA assigned this well-formed service name as a replacement for ""badm_pub""."
+6506,badm_pub,BoKS Admin Public Port
+6506,badm-pub,"BoKS Admin Public Port IANA assigned this well-formed service name as a replacement for ""badm_pub""."
+6506,badm_pub,BoKS Admin Public Port
+6507,bdir-priv,"BoKS Dir Server, Private Port IANA assigned this well-formed service name as a replacement for ""bdir_priv""."
+6507,bdir_priv,"BoKS Dir Server, Private Port"
+6507,bdir-priv,"BoKS Dir Server, Private Port IANA assigned this well-formed service name as a replacement for ""bdir_priv""."
+6507,bdir_priv,"BoKS Dir Server, Private Port"
+6508,bdir-pub,"BoKS Dir Server, Public Port IANA assigned this well-formed service name as a replacement for ""bdir_pub""."
+6508,bdir_pub,"BoKS Dir Server, Public Port"
+6508,bdir-pub,"BoKS Dir Server, Public Port IANA assigned this well-formed service name as a replacement for ""bdir_pub""."
+6508,bdir_pub,"BoKS Dir Server, Public Port"
+6511,dccp-udp,Datagram Congestion Control Protocol Encapsulation for NAT Traversal
+6513,netconf-tls,NETCONF over TLS
+6514,syslog-tls,Syslog over TLS
+6556,checkmk-agent,Checkmk Monitoring Agent
+6568,canit-store,"CanIt Storage Manager IANA assigned this well-formed service name as a replacement for ""canit_store""."
+6568,canit_store,CanIt Storage Manager
+6568,rp-reputation,Roaring Penguin IP Address Reputation Collection
+6600,mshvlm,Microsoft Hyper-V Live Migration
+6601,mstmg-sstp,Microsoft Threat Management Gateway SSTP
+6602,wsscomfrmwk,Windows WSS Communication Framework
+6624,datascaler-db,DataScaler database
+6625,datascaler-ctl,DataScaler control
+6632,mxodbc-connect,eGenix mxODBC Connect
+6633,cisco-vpath-tun,Cisco vPath Services Overlay
+6634,mpls-pm,MPLS Performance Measurement out-of-band response
+6635,mpls-udp,Encapsulate MPLS packets in UDP tunnels.
+6636,mpls-udp-dtls,Encapsulate MPLS packets in UDP tunnels with DTLS.
+6640,ovsdb,Open vSwitch Database protocol
+6655,pcs-sf-ui-man,PC SOFT - Software factory UI/manager
+6656,emgmsg,Emergency Message Control Service
+6657,palcom-disc,PalCom Discovery
+6665-6669,ircu,IRCU
+6672,vision-server,"vision_server IANA assigned this well-formed service name as a replacement for ""vision_server""."
+6672,vision_server,vision_server
+6672,vision-server,"vision_server IANA assigned this well-formed service name as a replacement for ""vision_server""."
+6672,vision_server,vision_server
+6673,vision-elmd,"vision_elmd IANA assigned this well-formed service name as a replacement for ""vision_elmd""."
+6673,vision_elmd,vision_elmd
+6673,vision-elmd,"vision_elmd IANA assigned this well-formed service name as a replacement for ""vision_elmd""."
+6673,vision_elmd,vision_elmd
+6678,vfbp,Viscount Freedom Bridge Protocol
+6678,vfbp-disc,Viscount Freedom Bridge Discovery
+6687,clever-ctrace,CleverView for cTrace Message Service
+6688,clever-tcpip,CleverView for TCP/IP Message Service
+6690,cleverdetect,CLEVERDetect Message Service
+6696,babel,Babel Routing Protocol
+6697,ircs-u,Internet Relay Chat via TLS/SSL
+6699,babel-dtls,Babel Routing Protocol over DTLS
+6704,frc-hp,ForCES HP (High Priority) channel
+6705,frc-mp,ForCES MP (Medium Priority) channel
+6706,frc-lp,ForCES LP (Low priority) channel
+6716,princity-agent,Princity Agent
+6777,ntz-tracker,netTsunami Tracker
+6778,ntz-p2p-storage,netTsunami p2p storage system
+6784,bfd-lag,Bidirectional Forwarding Detection (BFD) on Link Aggregation Group (LAG) Interfaces
+6789,radg,GSS-API for the Oracle Remote Administration Daemon
+6817,pentbox-sim,PenTBox Secure IM Protocol
+6868,acctopus-cc,Acctopus Command Channel
+6868,acctopus-st,Acctopus Status
+6900,rtimeviewer,R*TIME Viewer Data Interface
+6901,jetstream,Novell Jetstream messaging protocol
+6970,conductor,Conductor test coordination protocol
+6970,conductor-mpx,conductor for multiplex
+6980,qolyester,QoS-extended OLSR protocol
+7018,fisa-svc,FISA Service
+7019,doceri-ctl,doceri drawing service control
+7019,doceri-view,doceri drawing service screen view
+7026,loreji-panel,Loreji Webhosting Panel
+7031,iposplanet,IPOSPLANET retailing multi devices protocol
+7040,quest-disc,Quest application level network service discovery
+7072,iba-cfg,iba Device Configuration Protocol
+7072,iba-cfg-disc,iba Device Configuration Protocol
+7073,martalk,MarTalk protocol
+7088,zixi-transport,Zixi live video transport protocol
+7095,jdp-disc,Java Discovery Protocol
+7107,aes-x170,AES-X170
+7117,rothaga,Encrypted chat and file transfer service
+7123,snif,End-to-end TLS Relay Control Connection
+7167,casrmagent,CA SRM Agent
+7168,cnckadserver,cncKadServer DB & Inventory Services
+7172,metalbend,Port used for MetalBend programmable interface
+7173,zsecure,zSecure Server
+7181,janus-disc,Janus Guidewire Enterprise Discovery Service Bus
+7202,pon-ictp,"Inter-Channel Termination Protocol (ICTP) for multi-wavelength PON
+7215,PS-Server,Communication ports for PaperStream Server services
+7216,PS-Capture-Pro,PaperStream Capture Professional
+7228,citrixupp,Citrix Universal Printing Port
+7229,citrixuppg,Citrix UPP Gateway
+7234,asa-gateways,Traffic forwarding for Okta cloud infra
+7235,aspcoordination,ASP Coordination Protocol
+7236,display,Wi-Fi Alliance Wi-Fi Display Protocol
+7237,pads,PADS (Public Area Display System) Server
+7244,frc-hicp,FrontRow Calypso Human Interface Control Protocol
+7244,frc-hicp-disc,FrontRow Calypso Human Interface Control Protocol
+7282,mzca-action,eventACTION/ussACTION (MZCA) server
+7282,mzca-alert,eventACTION/ussACTION (MZCA) alert
+7283,genstat,General Statistics Rendezvous Protocol
+7300-7359,swx,The Swiss Exchange
+7420,ipluminary,Multichannel real-time lighting control
+7471,sttunnel,Stateless Transport Tunneling Protocol
+7474,neo4j,Neo4j Graph Database
+7478,openit,IT Asset Management
+7508,adcp,Automation Device Configuration Protocol
+7509,acplt,ACPLT - process automation service
+7550,cloudsignaling,Cloud Signaling Service
+7551,controlone-con,ControlONE Console signaling
+7563,cfw,Control Framework
+7569,dell-eql-asm,Dell EqualLogic Host Group Management
+7574,coherence,Oracle Coherence Cluster Service
+7574,coherence-disc,Oracle Coherence Cluster discovery service
+7626,simco,SImple Middlebox COnfiguration (SIMCO) Server
+7626,simco,SImple Middlebox COnfiguration (SIMCO)
+7630,hawk,HA Web Konsole
+7631,tesla-sys-msg,TESLA System Messaging
+7672,imqstomp,iMQ STOMP Server
+7673,imqstomps,iMQ STOMP Server over SSL
+7683,dmt,Cleondris DMT
+7687,bolt,Bolt database connection
+7690,sovd,Service-Oriented Vehicle Diagnostics
+7700,em7-secom,EM7 Secure Communications
+7701,nfapi,SCF nFAPI defining MAC/PHY split
+7742,msss,Mugginsoft Script Server Service
+7775,inetfs,A File System using TLS over a wide area network
+7784,s-bfd,Seamless Bidirectional Forwarding Detection (S-BFD)
+7802,vns-tp,Virtualized Network Services Tunnel Protocol
+7847,csoauth,A product key authentication protocol made by CSO
+7869,mobileanalyzer,MobileAnalyzer& MobileMonitor
+7870,rbt-smc,Riverbed Steelhead Mobile Service
+7871,mdm,Mobile Device Management
+7872,mipv6tls,TLS-based Mobile IPv6 Security
+7878,owms,Opswise Message Service
+7981,sossd-collect,Spotlight on SQL Server Desktop Collect
+7982,sossd-agent,Spotlight on SQL Server Desktop Agent
+7982,sossd-disc,Spotlight on SQL Server Desktop Agent Discovery
+7997,pushns,PUSH Notification Service
+7998,usicontentpush,USI Content Push Service
+8004,p2pevolvenet,Opensource Evolv Enterprise Platform P2P Network Node Connection Protocol
+8006,wpl-analytics,World Programming analytics
+8006,wpl-disc,World Programming analytics discovery
+8009,nvme-disc,NVMe over Fabrics Discovery Service
+8015,cfg-cloud,Configuration Cloud Service
+8016,ads-s,Beckhoff Automation Device Specification
+8017,cisco-cloudsec,Cisco Cloudsec Dataplane Port Number
+8042,fs-agent,FireScope Agent
+8043,fs-server,FireScope Server
+8044,fs-mgmt,FireScope Management Interface
+8051,rocrail,Rocrail Client Service
+8060,aero,Asymmetric Extended Route Optimization (AERO)
+8066,toad-bi-appsrvr,Toad BI Application Server
+8067,infi-async,Infinidat async replication
+8070,ucs-isc,Oracle Unified Communication Suite's Indexed Search Converter
+8077,mles,Mles is a client-server data distribution protocol targeted to serve as a lightweight and reliable distributed publish/subscribe database service.
+8084,websnp,Snarl Network Protocol over HTTP
+8090,opsmessaging,Vehicle to station messaging
+8091,jamlink,Jam Link Framework
+8101,ldoms-migr,Logical Domains Migration
+8102,kz-migr,Oracle Kernel zones migration server
+8111,skynetflow,Skynetflow network services
+8117,purityrpc,Purity replication clustering and remote management
+8140,puppet,The Puppet master service
+8149,eor-game,Edge of Reality game data
+8153,quantastor,QuantaStor Management Interface
+8162,lpar2rrd,LPAR2RRD client server communication
+8181,intermapper,Intermapper network management system
+8183,proremote,ProRemote
+8190,gcp-rphy,Generic control plane for RPHY
+8191,limnerpressure,Limner Pressure
+8202,aesop,Audio+Ethernet Standard Open Protocol
+8211,aruba-papi,Aruba Networks AP management
+8231,hncp-udp-port,HNCP
+8232,hncp-dtls-port,HNCP over DTLS
+8266,espeasy-p2p,ESPeasy peer-2-peer communication
+8270,robot-remote,Robot Framework Remote Library Interface
+8282,libelle,Libelle EnterpriseBus
+8282,libelle-disc,Libelle EnterpriseBus discovery
+8293,hiperscan-id,Hiperscan Identification Service
+8313,hub-open-net,Hub Open Network
+8384,marathontp,Marathon Transport Protocol
+8404,svcloud,SuperVault Cloud
+8405,svbackup,SuperVault Backup
+8415,dlpx-sp,Delphix Session Protocol
+8423,aritts,Aristech text-to-speech server
+8432,pgbackrest,PostgreSQL Backup
+8433,aws-as2,Non Persistent Desktop and Application Streaming
+8445,copy,Port for copy peer sync feature
+8445,copy-disc,Port for copy discovery
+8457,nexentamv,Nexenta Management GUI
+8470,cisco-avp,Cisco Address Validation Protocol
+8501,cmtp-mgt,CYTEL Message Transfer Management
+8501,cmtp-av,CYTEL Message Transfer Audio and Video
+8502,ftnmtp,FTN Message Transfer Protocol
+8503,lsp-self-ping,MPLS LSP Self-Ping
+8609,canon-cpp-disc,Canon Compact Printer Protocol Discovery
+8615,imink,Imink Service Control
+8665,monetra,Monetra
+8666,monetra-admin,Monetra Administrative Access
+8675,msi-cps-rm,Motorola Solutions Customer Programming Software for Radio Management
+8675,msi-cps-rm-disc,Motorola Solutions Customer Programming Software for Radio Management Discovery
+8688,openremote-ctrl,OpenRemote Controller HTTP/REST
+8699,vnyx,VNYX Primary Port
+8710,semi-grpc,gRPC for SEMI Standards implementations
+8711,nvc,Nuance Voice Control
+8732,dtp-net,DASGIP Net Services
+8750,dey-keyneg,DEY Storage Key Negotiation
+8767,core-of-source,Online mobile multiplayer game
+8768,sandpolis,Sandpolis Server
+8769,oktaauthenticat,Okta MultiPlatform Access Mgmt for Cloud Svcs
+8778,uec,Stonebranch Universal Enterprise Controller
+8805,pfcp,Destination Port number for PFCP
+8807,hes-clip,HES-CLIP Interoperability protocol
+8808,ssports-bcast,STATSports Broadcast Service
+8809,3gpp-monp,MCPTT Off-Network Protocol (MONP)
+8881,galaxy4d,Galaxy4D Online Game Engine
+8888,ddi-tcp-1,NewsEDGE server TCP (TCP 1)
+8888,ddi-udp-1,NewsEDGE server UDP (UDP 1)
+8889,ddi-tcp-2,Desktop Data TCP 1
+8889,ddi-udp-2,NewsEDGE server broadcast
+8890,ddi-tcp-3,Desktop Data TCP 2
+8890,ddi-udp-3,NewsEDGE client broadcast
+8891,ddi-tcp-4,Desktop Data TCP 3: NESS application
+8891,ddi-udp-4,Desktop Data UDP 3: NESS application
+8892,ddi-tcp-5,Desktop Data TCP 4: FARM product
+8892,ddi-udp-5,Desktop Data UDP 4: FARM product
+8893,ddi-tcp-6,Desktop Data TCP 5: NewsEDGE/Web application
+8893,ddi-udp-6,Desktop Data UDP 5: NewsEDGE/Web application
+8894,ddi-tcp-7,Desktop Data TCP 6: COAL application
+8894,ddi-udp-7,Desktop Data UDP 6: COAL application
+8908,dpp,WFA Device Provisioning Protocol
+8937,twds,Transaction Warehouse Data Service
+8953,ub-dns-control,unbound dns nameserver control
+8981,nod-client,Network of Devices Client
+8997,oracle-ms-ens,Oracle Messaging Server Event Notification Service
+8998,canto-roboflow,Canto RoboFlow Control
+9005,golem,Golem Inter-System RPC
+9007,ogs-client,Open Grid Services Client
+9008,ogs-server,Open Grid Services Server
+9010,sdr,Secure Data Replicator Protocol
+9011,d-star,D-Star Routing digital voice+data for amateur radio
+9050,versiera,Versiera Agent Listener
+9051,fio-cmgmt,Fusion-io Central Manager Service
+9060,CardWeb-IO,CardWeb request-response I/O exchange
+9060,CardWeb-RT,CardWeb realtime device data
+9081,cisco-aqos,Required for Adaptive Quality of Service
+9082,lcs-ap,LCS Application Protocol
+9083,emc-pp-mgmtsvc,EMC PowerPath Mgmt Service
+9093,copycat,Copycat database replication service
+9106,astergate,Astergate Control Service
+9106,astergate-disc,Astergate Discovery Service
+9107,astergatefax,AstergateFax Control Service
+9122,grcmp,Global Relay compliant mobile instant messaging protocol
+9123,grcp,Global Relay compliant instant messaging protocol
+9277,traingpsdata,GPS Data transmitted from train to ground network
+9286,n2receive,n2 monitoring receiver
+9306,sphinxql,Sphinx search server (MySQL listener)
+9310,sapms,SAP Message Server
+9312,sphinxapi,Sphinx search server
+9339,gnmi-gnoi,gRPC Network Mgmt/Operations Interface
+9340,gribi,gRPC Routing Information Base Interface
+9345,rancher,Rancher Agent
+9387,d2dconfig,D2D Configuration Service
+9388,d2ddatatrans,D2D Data Transfer Service
+9389,adws,Active Directory Web Services
+9390,otp,OpenVAS Transfer Protocol
+9445,mindarray-ca,MindArray Systems Console Agent
+9522,sma-spw,SMA Speedwire
+9559,p4runtime,P4Runtime gRPC Service
+9614,iadt-tls,iADT Protocol over TLS
+9616,erunbook-agent,"eRunbook Agent IANA assigned this well-formed service name as a replacement for ""erunbook_agent""."
+9616,erunbook_agent,eRunbook Agent
+9617,erunbook-server,"eRunbook Server IANA assigned this well-formed service name as a replacement for ""erunbook_server""."
+9617,erunbook_server,eRunbook Server
+9630,peoctlr,Peovica Controller
+9631,peocoll,Peovica Collector
+9632,mc-comm,Mobile-C Communications
+9640,pqsflows,ProQueSys Flows Service
+9666,zoomcp,Zoom Control Panel Game Server Management
+9876,sd,Session Director
+9877,x510,The X.510 wrapper protocol
+9878,kca-service,The KX509 Kerberized Certificate Issuance Protocol in Use in 2012
+9899,sctp-tunneling,SCTP TUNNELING
+9901,enrp,enrp server channel
+9901,enrp-sctp,enrp server channel
+9902,enrp-sctp-tls,enrp/tls server channel
+9903,multicast-ping,Multicast Ping Protocol
+9925,xybrid-cloud,XYBRID Cloud
+9954,hinp,HaloteC Instrument Network Protocol
+9955,alljoyn-stm,Contact Port for AllJoyn standard messaging
+9955,alljoyn-mcm,Contact Port for AllJoyn multiplexed constrained messaging
+9956,alljoyn,Alljoyn Name Service
+9978,xybrid-rt,XYBRID RT Server
+9979,visweather,Valley Information Systems Weather station data
+9981,pumpkindb,Event sourcing database engine with a built-in programming language
+9988,nsesrvr,Software Essentials Secure HTTP server
+10003,documentum-s,"EMC-Documentum Content Server Product IANA assigned this well-formed service name as a replacement for ""documentum_s""."
+10003,documentum_s,EMC-Documentum Content Server Product
+10003,documentum-s,"EMC-Documentum Content Server Product IANA assigned this well-formed service name as a replacement for ""documentum_s""."
+10003,documentum_s,EMC-Documentum Content Server Product
+10004,emcrmirccd,EMC Replication Manager Client
+10005,emcrmird,EMC Replication Manager Server
+10006,netapp-sync,Sync replication protocol among different NetApp platforms
+10010,rxapi,ooRexx rxapi services
+10020,abb-hw,Hardware configuration and maintenance
+10023,cefd-vmp,Comtech EF-Data's Vipersat Management Protocol
+10055,qptlmd,Quantapoint FLEXlm Licensing Service
+10111,nmea-onenet,NMEA OneNet multicast messaging
+10125,cimple,HotLink CIMple REST API
+10129,bmc-gms,BMC General Manager Server
+10161,snmptls,SNMP-TLS
+10161,snmpdtls,SNMP-DTLS
+10162,snmptls-trap,SNMP-Trap-TLS
+10162,snmpdtls-trap,SNMP-Trap-DTLS
+10201,rsms,Remote Server Management Service
+10201,rscs,Remote Server Control and Test Service
+10253,eapol-relay,Relay of EAPOL frames
+10261,tile-ml,Tile remote machine learning
+10321,cosir,Computer Op System Information Report
+10439,bngsync,BalanceNG session table synchronization protocol
+10443,cirrossp,CirrosSP Workstation Communication
+10500,hip-nat-t,HIP NAT-Traversal
+10548,serverdocs,Apple Document Sharing Service
+10631,printopia,Printopia Serve
+10809,nbd,Linux Network Block Device
+10810,nmc-disc,Nuance Mobile Care Discovery
+10933,octopustentacle,Listen port used by the Octopus Deploy Tentacle deployment agent
+11103,origo-sync,OrigoDB Server Sync Interface
+11104,netapp-icmgmt,NetApp Intercluster Management
+11105,netapp-icdata,NetApp Intercluster Data
+11108,myq-termlink,Hardware Terminals Discovery and Low-Level Communication Protocol
+11109,sgi-dmfmgr,Data migration facility Manager (DMF) is a browser based interface to DMF
+11110,sgi-soap,Data migration facility (DMF) SOAP is a web server protocol to support remote access to DMF
+11171,snss,Surgical Notes Security Service Discovery (SNSS)
+11172,oemcacao-jmxmp,OEM cacao JMX-remoting access point
+11173,t5-straton,Straton Runtime Programing
+11174,oemcacao-rmi,OEM cacao rmi registry access point
+11175,oemcacao-websvc,OEM cacao web service access point
+11202,dcsl-backup,DCSL Network Backup Services
+11430,lsdp,Lenbrook Service Discovery Protocol
+11489,asgcypresstcps,ASG Cypress Secure Only
+11623,emc-xsw-dconfig,EMC XtremSW distributed config
+11796,lanschool,LanSchool
+11796,lanschool-mpt,Lanschool Multipoint
+11877,x2e-disc,X2E service discovery protocol
+11971,tibsd,TiBS Service
+11997,wmereceiving,WorldMailExpress
+11998,wmedistribution,WorldMailExpress
+11999,wmereporting,WorldMailExpress
+12009,ghvpn,Green Hills VPN
+12010,edbsrvr,ElevateDB Server
+12302,rads,"Remote Administration Daemon (RAD) is a system service that offers secure, remote, programmatic access to Solaris system configuration and run-time state"
+12546,carb-repl-ctrl,Carbonite Server Replication Control
+12865,netperf,control port for the netperf benchmark
+13218,emc-vcas-tcp,EMC Virtual CAS Service
+13218,emc-vcas-udp,EMV Virtual CAS Service Discovery
+13400,doip-data,DoIP Data
+13400,doip-disc,DoIP Discovery
+13823,bmdss,Blackmagic Design Streaming Server
+13832,a-trust-rpc,Certificate Management and Issuing
+13930,medevolve,MedEvolve Port Requester
+14001,sua,SUA
+14001,sua,De-Registered
+14001,sua,SUA
+14002,scotty-disc,Discovery of a SCOTTY hardware codec board
+14143,icpps,IceWall Cert Protocol over TLS
+14150,vcscmd,Veritas Cluster Server Command Server
+14500,xpra,xpra network protocol
+15002,onep-tls,Open Network Environment TLS
+15118,v2g-secc,v2g Supply Equipment Communication Controller Discovery Protocol
+15998,2ping,2ping Bi-Directional Ping Service
+15999,programmar,ProGrammar Enterprise
+16000,fmsas,Administration Server Access
+16001,fmsascon,Administration Server Connector
+16002,gsms,GoodSync Mediation Service
+16003,alfin,Automation and Control by REGULACE.ORG
+16020,jwpc,Filemaker Java Web Publishing Core
+16021,jwpc-bin,Filemaker Java Web Publishing Core Binary
+16162,solaris-audit,Solaris Audit - secure remote audit log
+16385,rdgs,Reliable Datagram Sockets
+16619,xoms,X509 Objects Management Service
+16665,axon-tunnel,Reliable multipath data transport for high latencies
+16666,vtp,Vidder Tunnel Protocol
+16789,cadsisvr,This server provides callable services to mainframe External Security Managers from any TCP/IP platform
+17010,ncpu,Plan 9 cpu port
+17184,vestasdlp,Vestas Data Layer Protocol
+17222,cpsp,Control Plane Synchronization Protocol (SPSP)
+17223,isa100-gci,ISA100 GCI is a service utilizing a common interface between an ISA100 Wireless gateway and a client application
+17224,trdp-pd,Train Realtime Data Protocol (TRDP) Process Data
+17500,db-lsp,Dropbox LanSync Protocol
+17500,db-lsp-disc,Dropbox LanSync Discovery
+17555,ailith,Ailith management of routers
+17777,sw-orion,SolarWinds Orion
+18104,radpdf,RAD PDF Service
+18136,racf,z/OS Resource Access Control Facility
+18186,ohsc,Occupational Health SC
+18186,ohsc,Occupational Health Sc
+18242,iclid,Checkpoint router monitoring
+18243,clusterxl,Checkpoint router state backup
+18516,heythings,HeyThings Device communicate service
+18668,vdmmesh,Manufacturing Execution Systems Mesh Communication
+18668,vdmmesh-disc,Manufacturing Execution Systems Mesh Communication
+19020,j-link,J-Link TCP/IP Protocol
+19220,cora,Client Connection Management and Data Exchange Service
+19220,cora-disc,Discovery for Client Connection Management and Data Exchange Service
+19788,mle,Mesh Link Establishment
+19790,faircom-db,FairCom Database
+19998,iec-104-sec,IEC 60870-5-104 process control - secure
+19999,dnp-sec,Distributed Network Protocol - secured
+20000,dnp,Distributed Network Protocol
+20012,ss-idi-disc,Samsung Interdevice Interaction discovery
+20013,ss-idi,Samsung Interdevice Interaction
+20034,nburn-id,"NetBurner ID Port IANA assigned this well-formed service name as a replacement for ""nburn_id""."
+20034,nburn_id,NetBurner ID Port
+20034,nburn-id,"NetBurner ID Port IANA assigned this well-formed service name as a replacement for ""nburn_id""."
+20034,nburn_id,NetBurner ID Port
+20057,avesterra,AvesTerra Hypergraph Transfer Protocol (HGTP)
+20810,crtech-nlm,CRTech NLM
+20999,athand-mmp,At Hand MMP
+20999,athand-mmp,AT Hand MMP
+21010,notezilla-lan,Notezilla.Lan Server
+21212,trinket-agent,Distributed artificial intelligence
+21213,cohesity-agent,Cohesity backup agents
+21221,aigairserver,Services for Air Server
+21553,rdm-tfs,Raima RDM TFS
+21801,sal,Safe AutoLogon
+22125,dcap,dCache Access Protocol
+22128,gsidcap,GSI dCache Access Protocol
+22222,easyengine,EasyEngine is CLI tool to manage WordPress Sites on Nginx server
+22335,shrewd-control,Initium Labs Security and Automation Control
+22335,shrewd-stream,Initium Labs Security and Automation Streaming
+22351,codemeter-cmwan,TPC/IP requests of copy protection software to a server
+22537,caldsoft-backup,CaldSoft Backup server file transfer
+22555,vocaltec-wconf,Vocaltec Web Conference
+22555,vocaltec-phone,Vocaltec Internet Phone
+23053,gntp,Generic Notification Transport Protocol
+23272,s102,S102 application
+23294,5afe-dir,5AFE SDN Directory
+23294,5afe-disc,5AFE SDN Directory discovery
+23456,aequus,Aequus Service
+23457,aequus-alt,Aequus Service Mgmt
+23546,areaguard-neo,AreaGuard Neo - WebServer
+24322,hid,Transport of Human Interface Device data streams
+24323,vrmg-ip,Verimag mobile class protocol over TCP
+24386,intel-rci,"Intel RCI IANA assigned this well-formed service name as a replacement for ""intel_rci""."
+24386,intel_rci,Intel RCI
+24386,intel-rci,"Intel RCI IANA assigned this well-formed service name as a replacement for ""intel_rci""."
+24386,intel_rci,Intel RCI
+24577,bilobit,bilobit Service
+24577,bilobit-update,bilobit Service Update
+24666,sdtvwcam,Service used by SmarDTV to communicate between a CAM and a second screen application
+24754,cslg,Citrix StorageLink Gateway
+24850,assoc-disc,Device Association Discovery
+25471,rna,RNSAP User Adaptation for Iurh
+25576,sauterdongle,Sauter Dongle
+25604,idtp,Identifier Tracing Protocol
+25954,bf-game,Bitfighter game server
+25955,bf-master,Bitfighter master server
+26257,cockroach,CockroachDB
+26486,exoline-tcp,EXOline-TCP
+26486,exoline-udp,EXOline-UDP
+27000-27009,flex-lm,FLEX LM (1-10)
+27010,flex-lmadmin,A protocol for managing license services
+27017,mongodb,Mongo database system
+27876,astrolink,Astrolink Protocol
+27999,tw-auth-key,TW Authentication/Key Distribution and
+27999,tw-auth-key,Attribute Certificate Services
+28001,pqsp,PQ Service
+28010,gruber-cashreg,Gruber cash registry protocol
+28080,thor-engine,thor/server - ML engine
+28119,a27-ran-ran,A27 cdma2000 RAN Management
+28589,bosswave,Building operating system services wide area verified exchange
+29000,saltd-licensing,Siemens Licensing Server
+29118,sgsap,SGsAP in 3GPP
+29168,sbcap,SBcAP in 3GPP
+29169,iuhsctpassoc,HNBAP and RUA Common Association
+29999,bingbang,data exchange protocol for IEC61850 in wind power plants
+30000,ndmps,Secure Network Data Management Protocol
+30004,amicon-fpsu-s,Amicon FPSU-IP VPN
+30400,gs-realtime,GroundStar RealTime System
+30832,samsung-disc,Samsung Convergence Discovery Protocol
+31016,ka-sddp,Kollective Agent Secure Distributed Delivery Protocol
+31016,ka-kdp,Kollective Agent Kollective Delivery Protocol
+31020,autotrac-acp,Autotrac ACP 245
+31029,yawn,YaWN - Yet Another Windows Notifier
+31400,pace-licensed,PACE license server
+31685,dsx-monitor,"DS Expert Monitor IANA assigned this well-formed service name as a replacement for ""dsx_monitor""."
+31685,dsx_monitor,DS Expert Monitor
+31948,iceedcp-tx,"Embedded Device Configuration Protocol TX IANA assigned this well-formed service name as a replacement for ""iceedcp_tx""."
+31948,iceedcp_tx,Embedded Device Configuration Protocol TX
+31948,iceedcp-tx,"Embedded Device Configuration Protocol TX IANA assigned this well-formed service name as a replacement for ""iceedcp_tx""."
+31948,iceedcp_tx,Embedded Device Configuration Protocol TX
+31949,iceedcp-rx,"Embedded Device Configuration Protocol RX IANA assigned this well-formed service name as a replacement for ""iceedcp_rx""."
+31949,iceedcp_rx,Embedded Device Configuration Protocol RX
+31949,iceedcp-rx,"Embedded Device Configuration Protocol RX IANA assigned this well-formed service name as a replacement for ""iceedcp_rx""."
+31949,iceedcp_rx,Embedded Device Configuration Protocol RX
+32400,plex,Plex multimedia
+32771,filenet-rmi,FileNET RMI
+32771,filenet-rmi,FileNet RMI
+32811,retp,Real Estate Transport Protocol
+33000,wg-endpt-comms,WatchGuard Endpoint Communications
+33060,mysqlx,MySQL Database Extended Interface
+33333,dgi-serv,Digital Gaslight Service
+33334,speedtrace,SpeedTrace TraceAgent
+33334,speedtrace-disc,SpeedTrace TraceAgent Discovery
+33435,mtrace,IP Multicast Traceroute
+33890,digilent-adept,Adept IP protocol
+34567,dhanalakshmi,dhanalakshmi.org EDI Service
+34567,edi_service,dhanalakshmi.org EDI Service
+35000,heathview,HeathView
+35002,rt-sound,ReadyTech Sound Server
+35003,rt-devicemapper,ReadyTech DeviceMapper Server
+35005,rt-labtracker,ReadyTech LabTracker
+35006,rt-helper,ReadyTech Helper Service
+35354,kitim,KIT Messenger
+35355,altova-lm,Altova License Management
+35355,altova-lm-disc,Altova License Management Discovery
+35356,guttersnex,Gutters Note Exchange
+35357,openstack-id,OpenStack ID Service
+36411,wlcp,Wireless LAN Control plane Protocol (WLCP)
+36412,s1-control,S1-Control Plane (3GPP)
+36422,x2-control,X2-Control Plane (3GPP)
+36423,slmap,SLm Interface Application Protocol
+36424,nq-ap,Nq and Nq' Application Protocol
+36443,m2ap,M2 Application Part
+36444,m3ap,M3 Application Part
+36462,xw-control,Xw-Control Plane (3GPP)
+36524,febooti-aw,Febooti Automation Workshop
+36602,observium-agent,Observium statistics collection agent
+36700,mapx,MapX communication
+37472,3gpp-w1ap,W1 signalling transport
+37483,gdrive-sync,Google Drive Sync
+37601,eftp,Epipole File Transfer Protocol
+38000,ivs-database,InfoVista Server Database
+38001,ivs-insertion,InfoVista Server Insertion
+38002,cresco-control,Cresco Controller
+38002,crescoctrl-disc,Cresco Controller Discovery
+38412,ng-control,NG Control Plane (3GPP)
+38422,xn-control,Xn Control Plane (3GPP)
+38462,e1-interface,E1 signalling transport (3GPP)
+38472,f1-control,F1 Control Plane (3GPP)
+38638,psqlmws,Premier SQL Middleware Server
+38800,sruth,"Sruth is a service for the distribution of routinely-
+38865,secrmmsafecopya,Security approval process for use of the secRMM SafeCopy program
+39063,vroa,Children's hearing test/Telemedicine
+40023,k-patentssensor,K-PatentsSensorInformation
+40404,sptx,Simplify Printing TX
+40853,ortec-disc,ORTEC Service Discovery
+41121,tentacle,Tentacle Server
+41230,z-wave-s,Z-Wave Protocol over SSL/TLS
+41230,z-wave-s,Z-Wave Protocol over DTLS
+41796,crestron-cips,Crestron Secure Control Port
+41797,crestron-ctps,Crestron Secure Terminal Port
+42999,curiosity,API endpoint for search application
+43000,recvr-rc,Receiver Remote Control
+43000,recvr-rc-disc,Receiver Remote Control Discovery
+43191,noit-transport,Reconnoiter Agent Data Transport
+43210,shaperai,Shaper Automation Server Management
+43210,shaperai-disc,Shaper Automation Server Management Discovery
+43438,hmip-routing,HmIP LAN Routing
+43439,eq3-update,EQ3 firmware update
+43439,eq3-config,EQ3 discovery and configuration
+43440,ew-mgmt,Cisco EnergyWise Management
+43440,ew-disc-cmd,Cisco EnergyWise Discovery and Command Flooding
+44123,z-wave-tunnel,Z-Wave Secure Tunnel
+44323,pmwebapi,HTTP binding for Performance Co-Pilot client API
+44444,cognex-dataman,Cognex DataMan Management Protocol
+44445,acronis-backup,Acronis Backup Gateway service port
+44544,domiq,DOMIQ Building Automation
+44600,asihpi,AudioScience HPI
+44818,EtherNet-IP-2,"EtherNet/IP messaging IANA assigned this well-formed service name as a replacement for ""EtherNet/IP-2""."
+44818,EtherNet/IP-2,EtherNet/IP messaging
+44818,EtherNet-IP-2,"EtherNet/IP messaging IANA assigned this well-formed service name as a replacement for ""EtherNet/IP-2""."
+44818,EtherNet/IP-2,EtherNet/IP messaging
+44900,m3da,M3DA is used for efficient machine-to-machine communications
+44900,m3da-disc,M3DA Discovery is used for efficient machine-to-machine communications
+45000,asmp,Nuance AutoStore Status Monitoring Protocol (data transfer)
+45000,asmp-mon,Nuance AutoStore Status Monitoring Protocol (device monitoring)
+45001,asmps,Nuance AutoStore Status Monitoring Protocol (secure data transfer)
+45002,rs-status,Redspeed Status Monitor
+45045,synctest,Remote application control protocol
+45514,cloudcheck,ASSIA CloudCheck WiFi Management System
+45514,cloudcheck-ping,ASSIA CloudCheck WiFi Management keepalive
+45824,dai-shell,Server for the DAI family of client-server products
+46336,inedo,Listen port used for Inedo agent communication
+46998,spremotetablet,Connection between a desktop computer or server and a signature tablet to capture handwritten signatures
+47001,winrm,Windows Remote Management Service
+47100,jvl-mactalk,Configuration of motors connected to Industrial Ethernet
+47809,presonus-ucnet,PreSonus Universal Control Network Protocol
+48004,nimbusdb,NimbusDB Connector
+48005,nimbusdbctrl,NimbusDB Control
+48048,juka,Juliar Programming Language Protocol
+48049,3gpp-cbsp,3GPP Cell Broadcast Service Protocol
+48050,weandsf,WeFi Access Network Discovery and Selection Function
+49000,matahari,Matahari Broker
+49001,nusrp,Nuance Unity Service Request Protocol
+49001,nusdp-disc,Nuance Unity Service Discovery Protocol
+49150,inspider,InSpider System
+      synchronization protocol, content pool database discovery, and

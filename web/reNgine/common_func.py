@@ -716,6 +716,7 @@ def get_whois(ip_domain, save_db=False, fetch_from_db=True):
         tech_email = whois.get('tech_email')
 
         if save_db and Domain.objects.filter(name=ip_domain).exists():
+            logger.info("ELIOTT OK 1")
             logger.info('Saving in DB!')
             domain = Domain.objects.get(name=ip_domain)
 

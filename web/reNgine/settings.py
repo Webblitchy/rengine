@@ -2,6 +2,17 @@ import os
 from reNgine.init import first_run
 from celery.schedules import crontab
 
+# Django types (for lsp)
+from django.db.models import ForeignKey
+from django.db.models.manager import BaseManager
+from django.db.models.query import QuerySet
+
+# NOTE: there are probably other items you'll need to monkey patch depending on
+# your version.
+for cls in [QuerySet, BaseManager, ForeignKey]:
+    cls.__class_getitem__ = classmethod(lambda cls, *args, **kwargs: cls)  # type: ignore [attr-defined]
+
+
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #       RENGINE CONFIGURATIONS

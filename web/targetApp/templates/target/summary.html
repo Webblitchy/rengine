@@ -39,6 +39,11 @@ Target Summary
 				<li class="nav-item">
 					<a class="nav-link" id="pills-subdomain-tab" data-bs-toggle="tab" aria-expanded="false" class="nav-link" href="#subdomain-tab">Subdomains</a>
 				</li>
+				{% if target.is_internal %}	
+				<li class="nav-item">
+					<a class="nav-link" id="pills-internalips-tab" data-bs-toggle="tab" aria-expanded="false" class="nav-link" href="#internalips-tab">Internal IPs</a>
+				</li>
+				{% endif %}	
 				<li class="nav-item">
 					<a class="nav-link" id="pills-endpoints-tab" data-bs-toggle="tab" aria-expanded="false" class="nav-link" href="#endpoints-tab">URLs</a>
 				</li>
@@ -594,6 +599,11 @@ Target Summary
 <div class="tab-pane" id="subdomain-tab">
 	{% include 'base/_items/subdomain_tab_content.html' with target_summary=True%}
 </div>
+{% if target.is_internal %}	
+<div class="tab-pane" id="internalips-tab">
+	{% include 'base/_items/internalips_tab_content.html' with target_summary=True%}
+</div>
+{% endif %}
 <div class="tab-pane" id="endpoints-tab">
 	{% include 'base/_items/endpoint_tab_content.html' with target_summary=True%}
 </div>
@@ -1304,6 +1314,107 @@ $(document).ready(function(){
 		});
 
 	});
+
+
+	
+	$("#pills-internalips-tab").click(function() {
+		var subdomain_datatables = $('#internalips_scan_results').DataTable({
+			"destroy": true,
+			"processing": true,
+			"oLanguage": {
+				"oPaginate": {
+					"sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>',
+					"sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'
+				},
+				"sInfo": "Showing page _PAGE_ of _PAGES_",
+				"sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+				"sSearchPlaceholder": "Search...",
+				"sLengthMenu": "Results :  _MENU_",
+				"sProcessing": "Fetching Internal IPs... Please wait..."
+			},
+			"fnCreatedRow": function(nRow, aData, iDataIndex) {
+				$(nRow).attr('id', 'subdomain_row_' + aData['id']);
+			},
+			"stripeClasses": [],
+			"lengthMenu": [50, 100, 500, 1000],
+			"pageLength": 50,
+			'serverSide': true,
+			"ajax": '/api/listDatatableInternalips/?target_id={{target.id}}&format=datatables',
+			"order": [
+				[0, "desc"]
+			],
+			"columns": [{
+					'data': 'id'
+				},
+				{
+					'data': 'ip_address'
+				},
+				{
+					'data': 'ip_address'
+				},
+			],
+			"columnDefs": [
+				{
+					"visible": false,
+					"orderable": true,
+					"targets":[0]
+				},
+				{
+					"orderable": false,
+					"searchable": false,
+					"targets": [1,2]
+				},
+				// ip address
+				{
+					"render": function(data, type, row) {
+						ip_badge = ''
+						if (data) {
+							ip_badge += `<span class='m-1 badge badge-soft-primary badge-link' onclick="get_ip_details('${data["ip_address"]}', scan_id=null, domain_id={{target.id}})">${data["address"]}</span>`
+							return ip_badge;
+						}
+						return "N/A";
+					},
+					"targets": 1,
+				},
+				// open ports
+				{
+					"render": function(data, type, row) {
+  						port_badge = ''
+  						if (data) {
+							ports = data["ports"]
+							for (port of ports) {
+								console.log(port)
+								badge_color = port['is_uncommon'] ? 'danger' : 'primary';
+								title = port['is_uncommon'] ? 'Uncommon Port - ' + port['description'] : port['description'];
+								port_badge += `<span class='m-1 badge badge-soft-${badge_color} bs-tooltip badge-link' title='${title}' onclick="get_port_details(${port['number']}, scan_id=null, domain_id={{target.id}})">${port['number']}/${port['service_name']}</span>`
+							}
+  							return port_badge;
+  						}
+						return "N/A";
+					},
+					"targets": 2,
+				},
+			],
+			"dom": "<'row'<'col-lg-12 col-md-12 col-12 mb-2'l>>" +
+				"<'table-responsive'tr>" +
+				"<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
+			drawCallback: function() {
+				$('.badge').tooltip({
+					template: '<div class="tooltip status" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+				})
+				$('.bs-tooltip').tooltip();
+
+			},
+			"rowCallback": function(row, data, dataIndex) {
+				if (data['is_important']) {
+					$(row).addClass('table-danger');
+				}
+			},
+		});
+
+
+	});
+
 
 	$("#pills-endpoints-tab").click(function() {
 		get_endpoints(scan_history=null, domain_id={{target.id}}, gf_tags=null);

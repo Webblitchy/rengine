@@ -1496,7 +1496,41 @@ function get_domain_whois(domain_name, show_add_target_btn=false) {
 	});
 }
 
-function display_whois_on_modal(response, show_add_target_btn=false) {
+
+
+function check_internal_ip(ip) {
+	var url = `/api/tools/internal-pentest/check-ip/?format=json&ip=${ip}`
+	Swal.fire({
+		title: `Checking agent address ${ip}...`
+	});
+	$('.modal').modal('hide');
+	swal.showLoading();
+	fetch(url, {
+		method: 'GET',
+		credentials: "same-origin",
+		headers: {
+			"X-CSRFToken": getCookie("csrftoken"),
+			'Content-Type': 'application/json'
+		},
+	}).then(response => response.json()).then(function(response) {
+		swal.close();
+		if (response.status) {
+			Swal.fire({
+				title: 'Working!',
+				text: `reNgine could reach the agent address`,
+				icon: 'success'
+			});
+		} else {
+			Swal.fire({
+				title: 'Oops!',
+				text: `reNgine could not reach the agent address`,
+				icon: 'error'
+			});
+		}
+	});
+}
+
+function display_whois_on_modal(response, show_add_target_btn = false) {
 	console.log(response);
 	// this function will display whois data on modal, should be followed after get_domain_whois()
 	$('#modal_dialog').modal('show');

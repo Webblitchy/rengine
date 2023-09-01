@@ -55,3 +55,6 @@ secret
 /secrets
 
 get-docker.sh
+.venv/
+
+**/migrations/*

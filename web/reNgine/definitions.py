@@ -19,6 +19,7 @@ ALL = 'all'
 
 SUBDOMAIN_DISCOVERY = 'subdomain_discovery'
 PORT_SCAN = 'port_scan'
+IPS = 'IPs'
 SCREENSHOT = 'screenshot'
 DIR_FILE_FUZZ = 'dir_file_fuzz'
 FETCH_URL = 'fetch_url'

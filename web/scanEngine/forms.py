@@ -640,6 +640,7 @@ class ReportForm(forms.ModelForm):
         self.initial['company_email'] = key.company_email
         self.initial['show_rengine_banner'] = key.show_rengine_banner
         self.initial['show_executive_summary'] = key.show_executive_summary
+        # self.initial['use_latex_template'] = key.use_latex_template
         self.initial['executive_summary_description'] = key.executive_summary_description
         self.initial['show_footer'] = key.show_footer
         self.initial['footer_text'] = key.footer_text
@@ -650,6 +651,7 @@ class ReportForm(forms.ModelForm):
         self.initial['show_rengine_banner'] = True
         self.initial['show_footer'] = False
         self.initial['show_executive_summary'] = False
+        # self.initial['use_latex_template'] = False
         self.initial['primary_color'] = '#FFB74D'
         self.initial['secondary_color'] = '#212121'
         self.initial['executive_summary_description'] = '''On **{scan_date}**, **{target_name}** engaged **{company_name}** to perform a security audit on their Web application.

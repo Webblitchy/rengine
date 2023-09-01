@@ -237,6 +237,8 @@ class Subdomain(models.Model):
 		return SubScan.objects.filter(subdomain__id=self.id).distinct().count()
 
 
+
+
 class SubScan(models.Model):
 	id = models.AutoField(primary_key=True)
 	start_scan_date = models.DateTimeField()
@@ -440,6 +442,81 @@ class IpAddress(models.Model):
 
 	def __str__(self):
 		return str(self.address)
+
+
+class InternalIp(models.Model):
+	id = models.AutoField(primary_key=True)
+	name = models.CharField(max_length=500) # = Domain.name+ip
+	scan_history = models.ForeignKey(ScanHistory, on_delete=models.CASCADE)
+	target_domain = models.ForeignKey(
+		Domain, on_delete=models.CASCADE, null=True, related_name="target_domain", blank=True)
+	ip_address = models.ForeignKey(IpAddress, on_delete=models.CASCADE, related_name='ip_address', blank=True)
+
+
+	def __str__(self):
+		return str(self.name)
+
+	@property
+	def get_endpoint_count(self):
+		return EndPoint.objects.filter(
+			scan_history=self.scan_history).filter(
+			subdomain__name=self.name).count()
+
+	@property
+	def get_info_count(self):
+		return Vulnerability.objects.filter(
+			scan_history=self.scan_history).filter(
+			subdomain__name=self.name).filter(severity=0).count()
+
+	@property
+	def get_low_count(self):
+		return Vulnerability.objects.filter(
+			scan_history=self.scan_history).filter(
+			subdomain__name=self.name).filter(severity=1).count()
+
+	@property
+	def get_medium_count(self):
+		return Vulnerability.objects.filter(
+			scan_history=self.scan_history).filter(
+			subdomain__name=self.name).filter(severity=2).count()
+
+	@property
+	def get_high_count(self):
+		return Vulnerability.objects.filter(
+			scan_history=self.scan_history).filter(
+			subdomain__name=self.name).filter(severity=3).count()
+
+	@property
+	def get_critical_count(self):
+		return Vulnerability.objects.filter(
+			scan_history=self.scan_history).filter(
+			subdomain__name=self.name).filter(severity=4).count()
+
+	@property
+	def get_total_vulnerability_count(self):
+		return Vulnerability.objects.filter(
+			scan_history=self.scan_history).filter(
+			subdomain__name=self.name).count()
+
+	@property
+	def get_vulnerabilities(self):
+		return Vulnerability.objects.filter(
+			scan_history=self.scan_history).filter(
+			subdomain__name=self.name)
+
+	# @property
+	# def get_directories_count(self):
+	# 	return DirectoryFile.objects.filter(directory_files__in=DirectoryScan.objects.filter(directories__in=Subdomain.objects.filter(id=self.id))).distinct().count()
+
+	@property
+	def get_todos(self):
+		TodoNote = apps.get_model('recon_note', 'TodoNote')
+		notes = TodoNote.objects.filter(scan_history__id=self.scan_history.id).filter(subdomain__id=self.id)
+		return notes.values()
+
+	@property
+	def get_subscan_count(self):
+		return SubScan.objects.filter(subdomain__id=self.id).distinct().count()
 
 
 class Port(models.Model):

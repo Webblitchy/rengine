@@ -8,6 +8,8 @@ router = routers.DefaultRouter()
 
 router.register(r'listDatatableSubdomain', SubdomainDatatableViewSet)
 
+router.register(r'listDatatableInternalips', InternalipsDatatableViewSet)
+
 router.register(r'listTargets', ListTargetsDatatableViewSet)
 
 router.register(r'listSubdomains', SubdomainsViewSet)
@@ -154,6 +156,10 @@ urlpatterns = [
         'tools/waf_detector/',
         WafDetector.as_view(),
         name='waf_detector'),
+    path(
+        'tools/internal-pentest/check-ip/',
+        CheckInternalIP.as_view(),
+        name='check_internal_ip'),
     path(
         'github/tool/get_latest_releases/',
         GithubToolCheckGetLatestRelease.as_view(),

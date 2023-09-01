@@ -1,16 +1,19 @@
 import os
+import math
 import traceback
 import yaml
 import json
 import csv
+from reNgine.settings import RENGINE_HOME
 import validators
 import random
 import requests
 import time
 import logging
 import metafinder.extractor as metadata_extractor
-import whatportis
+# import whatportis
 import subprocess
+import datetime
 
 from random import randint
 from time import sleep
@@ -26,9 +29,9 @@ from targetApp.models import Domain
 from scanEngine.models import EngineType
 from django.conf import settings
 from django.shortcuts import get_object_or_404
+from reNgine.utilities import whatportis
 
 from celery import shared_task
-from datetime import datetime
 from degoogle import degoogle
 
 from django.conf import settings
@@ -44,6 +47,9 @@ from targetApp.models import Domain
 from scanEngine.models import EngineType, Configuration, Wordlist
 
 from .common_func import *
+
+
+
 
 
 '''
@@ -112,6 +118,7 @@ def initiate_subtask(
 		sub_scan.status = RUNNING_TASK
 		sub_scan.save()
 
+		# subscan port_scan
 		if port_scan:
 			# delete any existing ports.json
 			rand_name = str(time.time()).split('.')[0]
@@ -202,6 +209,8 @@ def initiate_scan(
 		task.scan_status = -1
 	elif scan_type == 0:
 		task = ScanHistory.objects.get(pk=scan_history_id)
+	else:
+		return # disable lsp warning
 
 	# save the last scan date for domain model
 	domain.last_scan_date = timezone.now()
@@ -336,9 +345,14 @@ def initiate_scan(
 		task.save()
 
 	try:
-		if(task.port_scan):
-			activity_id = create_scan_activity(task, "Port Scanning", 1)
-			port_scanning(task, activity_id, yaml_configuration, results_dir, domain)
+		if task.port_scan :
+			if domain.is_internal:
+				activity_id = create_scan_activity(task, "Internal Port Scanning", 1)
+				internal_port_scanning(task, activity_id, yaml_configuration, domain)
+			else:
+				activity_id = create_scan_activity(task, "Port Scanning", 1)
+				port_scanning(task, activity_id, yaml_configuration, results_dir, domain)
+
 			update_last_activity(activity_id, 2)
 	except Exception as e:
 		logger.error(e)
@@ -1019,12 +1033,13 @@ def port_scanning(
 			subdomain,
 			port_results_file
 		)
+	else:
+		return
 
 	# exclude cdn port scanning
 	naabu_command += ' -exclude-cdn '
 
 	# check the yaml_configuration and choose the ports to be scanned
-	scan_ports = '-'  # default port scan everything
 	if PORTS in yaml_configuration[PORT_SCAN]:
 		# TODO:  legacy code, remove top-100 in future versions
 		all_ports = yaml_configuration[PORT_SCAN][PORTS]
@@ -1082,11 +1097,12 @@ def port_scanning(
 
 				if port_number in UNCOMMON_WEB_PORTS:
 					port.is_uncommon = True
-				port_detail = whatportis.get_ports(str(port_number))
 
-				if len(port_detail):
-					port.service_name = port_detail[0].name
-					port.description = port_detail[0].description
+				port_detail = whatportis(port_number)
+
+				if len(port_detail["name"]):
+					port.service_name = port_detail["name"]
+					port.description = port_detail["description"]
 
 				port.save()
 
@@ -1126,6 +1142,171 @@ def port_scanning(
 	if notification and notification[0].send_scan_output_file:
 		send_files_to_discord(results_dir + '/ports.json')
 
+def internal_port_scanning(
+		scan_history,
+		activity_id,
+		yaml_configuration,
+		domain=None,
+		subdomain=None,
+		subscan=None
+	):
+	# Random sleep to prevent ip and port being overwritten
+	sleep(randint(1,5))
+	'''
+	This function is responsible for running the port scan
+	'''
+
+	domain_name = domain.name if domain else subdomain
+	notification = Notification.objects.all()
+	if notification and notification[0].send_scan_status_notif:
+		send_notification('Internal Port Scan initiated for {}'.format(domain_name))
+	
+	"""
+	if domain:
+		subdomain_scan_results_file = results_dir + '/sorted_subdomain_collection.txt'
+		naabu_command = 'naabu -list {} -json -o {}'.format(
+			subdomain_scan_results_file,
+			port_results_file
+		)
+	elif subdomain:
+		naabu_command = 'naabu -host {} -o {} -json '.format(
+			subdomain,
+			port_results_file
+		)
+
+	"""
+	# check the yaml_configuration and choose the ports to be scanned
+	IPs = yaml_configuration[PORT_SCAN][IPS]
+
+	include_ports = "" # default
+	if PORTS in yaml_configuration[PORT_SCAN]:
+		# TODO:  legacy code, remove top-100 in future versions
+		all_ports = yaml_configuration[PORT_SCAN][PORTS]
+		if 'full' in all_ports:
+			include_ports = "full"
+
+		elif 'top-100' in all_ports:
+			include_ports = "top-100"
+		elif 'top-1000' in all_ports:
+			include_ports = "top-1000"
+		else:
+			include_ports = ','.join(str(port) for port in all_ports)
+
+	# check for exclude ports
+	exclude_ports = ""
+	if EXCLUDE_PORTS in yaml_configuration[PORT_SCAN] and yaml_configuration[PORT_SCAN][EXCLUDE_PORTS]:
+		exclude_ports += ','.join( str(port) for port in yaml_configuration['port_scan']['exclude_ports'])
+
+	rate = 0 # use not rate
+	if NAABU_RATE in yaml_configuration[PORT_SCAN] and yaml_configuration[PORT_SCAN][NAABU_RATE] > 0:
+		rate = yaml_configuration[PORT_SCAN][NAABU_RATE]
+
+	# Use the local config file
+	if USE_NAABU_CONFIG in yaml_configuration[PORT_SCAN] and yaml_configuration[PORT_SCAN][USE_NAABU_CONFIG]:
+		use_naabu_config = True
+	else:
+		use_naabu_config = False
+
+	# proxy = get_random_proxy()
+	# if proxy:
+	# 	naabu_command += ' -proxy "{}" '.format(proxy)
+	
+	start_time = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f")
+
+	# Send command to agent
+	data = {
+		"IPs": IPs,
+		"include_ports" : include_ports,
+		"exclude_ports" : exclude_ports,
+		"rate" : rate,
+		"use_naabu_config" : use_naabu_config,
+		"start_time" : start_time
+	}
+
+	url = f"https://{domain.ip_address_cidr}:1234/portscan"
+
+	cert_path = f"{RENGINE_HOME}/user-certs/{domain.name}"
+	certs = (f"{cert_path}/client.crt" , f"{cert_path}/client.key") # Use the client certificate
+	
+	
+	response = requests.post(url, cert=certs, json=data, verify=False) # doesn't need to verify certificate before using it
+	
+	if response.status_code == 400:
+		raise Exception("Certificate is not valid. (Use the same certificate on reNgine and reNgine-agent)")
+
+	
+	TIMEOUT_SEC = 1000
+	RETRY_TIME_SEC = 30
+	for _ in range(math.floor(TIMEOUT_SEC/RETRY_TIME_SEC)):
+		print("Waiting for internal scan to end")
+		resp = requests.get(f"{url}/{start_time}", cert=certs, verify=False)
+		if resp.status_code == 200:
+			print(resp.text)
+			result_file = resp.json()["jsonfile"]
+			read_port_scanning(result_file, subscan, domain,scan_history)
+			break
+		sleep(RETRY_TIME_SEC)
+
+def read_port_scanning(results: str, subscan, target_domain, scan_history):
+	# writing port results
+	try:
+		for line in results.splitlines():
+			json_st = json.loads(line.strip())
+			port_number = json_st['port']['Port']
+			ip_address = json_st['ip']
+			# host = json_st['host'] # il y a pas
+
+			# see if port already exists
+			if Port.objects.filter(number__exact=port_number).exists():
+				port = Port.objects.get(number=port_number)
+			else:
+				port = Port()
+				port.number = port_number
+
+				if port_number in UNCOMMON_WEB_PORTS:
+					port.is_uncommon = True
+
+				
+				port_detail = whatportis(port_number)
+
+				if len(port_detail["name"]):
+					port.service_name = port_detail["name"]
+					port.description = port_detail["description"]
+
+				port.save()
+
+			if IpAddress.objects.filter(address=ip_address).exists():
+				ip = IpAddress.objects.get(address=ip_address)
+			else:
+				# create a new ip
+				ip = IpAddress()
+				ip.address = ip_address
+				ip.save()
+			ip.ports.add(port)
+			ip.save()
+		
+			internal_ip_name = f"{target_domain.name}+{ip_address}"
+			# create only once the object
+			if not InternalIp.objects.filter(name=internal_ip_name).exists():
+				internalIp = InternalIp.objects.create(target_domain=target_domain, name=internal_ip_name, ip_address=ip, scan_history=scan_history)
+				internalIp.save()
+
+		# if subscan:
+		# 	ip.ip_subscan_ids.add(subscan)
+		# 	ip.save()
+
+		# TODO:
+		# if this ip does not belong to host, we also need to add to specific host
+
+		# if not Subdomain.objects.filter(name=host, scan_history=scan_history, ip_addresses__address=ip_address).exists():
+		# 	subdomain = Subdomain.objects.get(scan_history=scan_history, name=host)
+		# 	subdomain.ip_addresses.add(ip)
+		# 	subdomain.save()
+
+
+	except Exception:
+		print("CANNOT READ JSON")
+		# TODO:
 
 def check_waf(scan_history, results_dir):
 	'''

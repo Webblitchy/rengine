@@ -1,0 +1,77 @@
+\documentclass[a4paper,11pt]{book}
+
+\usepackage{array}
+
+% remove parindent
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\title{Pentest Report} % Sets article title
+\author{John Smith} % Sets authors name
+\date{\today} % Sets date for date compiled
+
+\begin{document} 
+\maketitle % creates title using information in preamble (title, author, date)
+
+\section{Show variables}
+
+Organisation name : test-google
+
+Organisation description : 
+
+Tests started on : 26 July, 2023\
+
+Testing status : Pentesting
+
+\underline{Domains} :
+
+\begin{itemize}
+    \item Domain number 1
+
+    Domain name : google.com
+
+    Domain description : 
+    
+        Domain ip : None
+
+    Domain vulnerabilities : 0
+    
+
+
+        Subdomain name : google.com
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+        Subdomain name : google.com
+
+        Subdomain page title : None
+
+        Subdomain type : None
+
+        \begin{center}
+            $\ast$~$\ast$~$\ast$
+        \end{center}
+
+    
+
+
+\end{itemize}
+
+
+% verbatim is just to show special character in latex (not jinja)
+\begin{verbatim} 
+Escape inline : {{
+
+Escape bloc : 
+ 
+{{ this is not interpreted by jinja }}
+
+\end{verbatim}
+
+\end{document}

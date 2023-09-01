@@ -25,6 +25,26 @@ urlpatterns = [
         views.update_organization,
         name='update_organization'),
     path(
+        'update/testing_status/<int:id>',
+        views.update_testing_status,
+        name='update_testing_status'),
+    path(
+        'generate_report/organization/<int:id>',
+        views.generate_organization_report,
+        name='generate_organization_report'),
+    path(
+        'download_pdf/organization/<int:id>',
+        views.download_report_pdf,
+        name='download_report_pdf'),
+    path(
+        'download_error_logs/organization/<int:id>',
+        views.download_error_logs,
+        name='download_error_logs'),
+    path(
+        'download_example/organization',
+        views.download_example_template,
+        name='download_example_template'),
+    path(
         'list/target',
         views.list_target,
         name='list_target'),

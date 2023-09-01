@@ -26,7 +26,7 @@ Add Organization
     <div class="card">
       <div class="card-body">
         <p>Organizations can be used to bundle the targets, an organization can have multiple targets. You will be able to scan the organizations just like the targets, but scanning the organization will allow you to scan all the targets within the organization together.</p>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="row">
             <div class="col-6">
@@ -42,7 +42,7 @@ Add Organization
               <label for="organizationDescription" class="form-label">Description (Optional)</label>
               {{ form.description }}
             </div>
-            <div class="col-12 mt-3">
+            <div class="col-6 mt-3">
               <label for="targets" class="form-label">Select Targets</label>
               {{form.domains}}
               {% if form.errors.domains %}
@@ -52,6 +52,10 @@ Add Organization
                 </p>
               </div>
               {% endif %}
+            </div>
+            <div class="col-6 mt-3">
+              <label for="latexTemplate" class="form-label" style="display: block;">Import latex template</label>
+              {{ form.latex_template }}
             </div>
           </div>
           <button class="btn btn-primary submit-fn mt-2 float-end" disabled="true" type="submit">Add Organization</button>

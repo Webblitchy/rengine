@@ -818,6 +818,13 @@ class SubdomainSerializer(serializers.ModelSerializer):
 		except:
 			return None
 
+class InternalipsSerializer(serializers.ModelSerializer):
+
+	ip_address = IpSerializer()
+
+	class Meta:
+		model = InternalIp
+		fields = '__all__'
 
 class EndpointSerializer(serializers.ModelSerializer):
 

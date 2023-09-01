@@ -168,3 +168,25 @@
       [ all ]\r\n  # custom_templates: []\r\n  severity: [ critical, high, medium,
       low, info, unknown ]\r\n\r\n#custom_header: 'name: value'"
     default_engine: true
+- model: scanEngine.enginetype
+  pk: 7
+  fields:
+    engine_name: Port Scan Only
+    subdomain_discovery: false
+    waf_detection: false
+    dir_file_fuzz: false
+    port_scan: true
+    fetch_url: false
+    vulnerability_scan: false
+    osint: false
+    screenshot: false
+    yaml_configuration: |
+      port_scan:
+        ports: [ top-100 ] # top-1000
+        rate: 1000
+        use_naabu_config: false
+        # exclude_ports: [80, 8080]
+        #
+        # Only used for internal scan:
+        IPs: [ 192.168.1.0/24 ] # 192.168.1.1
+    default_engine: true

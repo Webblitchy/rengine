@@ -1,2 +1,4 @@
 secret
 /secrets
+user-certs/*
+!user-certs/readme.txt

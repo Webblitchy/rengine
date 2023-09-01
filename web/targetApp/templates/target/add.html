@@ -39,6 +39,11 @@ Add or Import Targets
               Add Multiple Targets
             </a>
           </li>
+          <li class="nav-item">
+            <a href="#internal-target-tab" data-bs-toggle="tab" aria-expanded="true" class="nav-link">
+              Add Internal Target
+            </a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle arrow-none" href="#" id="import-dropdown" role="button"
             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -132,6 +137,33 @@ Add or Import Targets
                 </label>
                 <input type="text" class="form-control form-control-lg" id="targetH1TeamHandle" placeholder="team_handle" name="targetH1TeamHandle">
                 <button class="btn btn-primary submit-fn mt-2 float-end" disabled type="submit" name="add-ip-target" id="add-ip-target" value="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> <span id="add_ip_target_btn">Add Target</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="internal-target-tab" role="tabpanel" aria-labelledby="internal-target-tab">
+          <form method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-12">
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="internal_name" class="text-dark">Name</br><span class="text-muted">Name to define the internal target</span></label>
+                    <input type="text" name="internal_name" class="form-control form-control-lg" id="internal_name" placeholder="ACME internal Network">
+                  </div>
+                  <div class="col-6">
+                    <label for="internal_ip_address" class="text-dark">IP Address or URL of the agent</br><span class="text-muted">Example: 192.168.1.1 or www.example.com, both are supported</span></label>
+                    <input type="text" name="internal_ip_address" class="form-control form-control-lg" id="internal_ip_address" placeholder="X.X.X.X">
+                    <button class="btn btn-primary mt-2 float-end" type="button" name="check_internal_button" id="check_internal_button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg> Test IP Address</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-3">
+                <label for="internal_target_description" class="form-label">Target Description (Optional)</label>
+                <input type="text" class="form-control form-control-lg" id="internal_target_description" placeholder="Interesting Target" name="internal_target_description">
+              </div>
+              <div class="col-12 mt-3">
+                <button class="btn btn-primary submit-fn mt-2 float-end" type="submit" name="add-internal-target" id="add-internal-target" value="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> <span id="add_ip_target_btn">Add Internal Target</span></button>
               </div>
             </form>
           </div>
@@ -303,6 +335,43 @@ Add or Import Targets
         }
       });
     });
+
+    function actualize_check_internal_btn() {
+      let internal_ip = $("#internal_ip_address").val();
+      if (internal_ip.length > 0) {
+        $("#check_internal_button").removeAttr("disabled");
+      }
+      else {
+        $("#check_internal_button").prop("disabled", true);
+      }
+    }
+    $('#internal_ip_address').on('change keyup', actualize_check_internal_btn);
+    actualize_check_internal_btn()
+
+    $("#check_internal_button").click(function(){
+      let ip_addr = $("#internal_ip_address").val();
+      if (ip_addr) {
+        check_internal_ip(ip_addr);
+      }
+    });
+
+    // Reset the state of the button for internal address add
+    function actualize_add_internal_target_btn() {
+      let internal_name = $("#internal_name").val();
+      let internal_ip = $("#internal_ip_address").val();
+
+      if (internal_name.length > 0 && internal_ip.length > 0) {
+        $("#add-internal-target").removeAttr("disabled");
+      }
+      else {
+        $("#add-internal-target").prop("disabled", true);
+      }
+    }
+    $('#internal_name').on('change keyup', actualize_add_internal_target_btn);
+    $('#internal_ip_address').on('change keyup', actualize_add_internal_target_btn);
+    actualize_add_internal_target_btn() // called once at the begining (if the fields are already full)
+
+
 
     // if select all checkbox is checked, select all domains
     $("#select_all_ip_domains").click(function () {

@@ -194,11 +194,25 @@ class DomainInfo(models.Model):
 
 
 class Organization(models.Model):
+    class Status(models.TextChoices):
+        PENTESTING = "PE","Pentesting"
+        REPORTING = "RE", "Reporting"
+        PROOFREADING = "PR", "Proofreading"
+        VALIDATION = "VA", "Validation"
+        ARCHIVED = "AR", "Archived"
+
+
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=300, unique=True)
     description = models.TextField(blank=True, null=True)
     insert_date = models.DateTimeField()
     domains = models.ManyToManyField('Domain', related_name='domains')
+    latex_template = models.FileField(blank=True, null=True)
+    status = models.CharField(
+        max_length=2,
+        choices=Status.choices,
+        default=Status.PENTESTING
+    )
 
     def __str__(self):
         return self.name
@@ -216,6 +230,7 @@ class Domain(models.Model):
     insert_date = models.DateTimeField()
     start_scan_date = models.DateTimeField(null=True)
     domain_info = models.ForeignKey(DomainInfo, on_delete=models.CASCADE, null=True, blank=True)
+    is_internal = models.BooleanField(default=False)
 
     def get_organization(self):
         return Organization.objects.filter(domains__id=self.id)

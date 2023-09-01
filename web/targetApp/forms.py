@@ -79,6 +79,10 @@ class AddOrganizationForm(forms.Form):
         )
     )
 
+    latex_template = forms.FileField(
+        required=False
+    )
+
     def clean_name(self):
         data = self.cleaned_data['name']
         if Organization.objects.filter(name=data).count() > 0:
@@ -160,6 +164,10 @@ class UpdateOrganizationForm(forms.ModelForm):
                 "id": "domains",
             }
         )
+    )
+
+    latex_template = forms.FileField(
+        required=False
     )
 
     def set_value(self, organization_value, description_value):

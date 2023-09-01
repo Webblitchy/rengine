@@ -377,3 +377,26 @@ mark{
   background-color: #FFEB3B;
   color: #000;
 }
+
+
+select.testing_status {
+  background-color: rgb(255, 255, 255);
+  background-position: 95%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%23d3d3d3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-size: 20px;
+  background-origin: padding-box;
+  background-clip: border-box;
+  padding: 7px 18px 7px 14px;
+  height: auto;
+  box-shadow: none;
+  border-radius: 6px;
+  border: 1px solid #e0e6ed;
+  appearance:none;
+}
+
+select.testing_status:hover {
+  cursor : pointer;
+}
+

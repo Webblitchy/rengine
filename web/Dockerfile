@@ -22,7 +22,6 @@ RUN apt update -y && apt install -y  --no-install-recommends \
     gcc \
     git \
     libpq-dev \
-    libpq-dev \
     libpcap-dev \
     netcat \
     postgresql \
@@ -38,8 +37,9 @@ RUN apt update -y && apt install -y  --no-install-recommends \
     libpango-1.0-0 \
     libpangoft2-1.0-0 \
     geoip-bin \
-    geoip-database
-
+    geoip-database\
+    texlive-latex-base\
+    latexmk
 
 # Download and install go 1.20
 RUN wget https://golang.org/dl/go1.20.linux-amd64.tar.gz
