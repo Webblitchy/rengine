@@ -11,7 +11,7 @@ Enjoy peace of mind with reNgine's continuous monitoring, deeper reconnaissance,
 
 <h4>What is reNgine++ ?</h4>
 <p align="left">
-reNgine++ is a fork of <a href="https://github.com/yogeshojha/rengine">reNgine</a>. Besides beeing a powerful web application reconnaissance suite and having a modern interface, it adds a lot of features such as:
+reNgine++ is a fork of <a href="https://github.com/yogeshojha/rengine">reNgine</a>. Besides beeing a powerful web application reconnaissance suite and having a modern interface, it has a lot of features such as:
   
   - An internal network scanner, communicating to an <a href="https://github.com/Webblitchy/rengine-agent">internal agent</a> installed inside a network
   - A state associated with each pentest to know which step is the next one
