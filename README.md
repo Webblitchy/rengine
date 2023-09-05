@@ -25,7 +25,7 @@ reNgine++ makes it easy for penetration testers and security auditors to gather 
 
 ---
 
-## Usage
+## How to use
 
 ### Make an internal scan
 1. Install the <a href="https://github.com/Webblitchy/rengine-agent">internal agent</a> in a local network by following the instructions in the project README
@@ -53,10 +53,8 @@ reNgine++ makes it easy for penetration testers and security auditors to gather 
 7. From the `Organization` menu, download the report using the download button on the company line
 <img alt="Global report" src="/.github/screenshots/Download_report.png" width="50%">
 
-
-<p>
-Despite theses awesome new features, the interface and the mechanics remains the same hence the original documentation is still valid: <a href="https://rengine.wiki">rengine.wiki</a>
-</p>
+### Other
+Despite these awesome new features, the interface and the mechanics remains the same hence the original documentation is still valid: <a href="https://rengine.wiki">rengine.wiki</a>
 
 ---
 
