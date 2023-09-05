@@ -77,6 +77,7 @@ Despite theses awesome new features, the interface and the mecanics remains the 
 
 **reNgine can now be accessed from <https://127.0.0.1> or if you're on the VPS <https://your_vps_ip_address>**
 
+---
 
 ## Screenshots from original rengine
 
