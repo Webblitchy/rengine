@@ -34,14 +34,14 @@ reNgine++ makes it easy for penetration testers and security auditors to gather 
 4. Start a scan for example with the engine "Port scan only" with the new target created, from the `Targets` menu
 5. Results (such as Internal IPs) are shown in the `Target Summary` visible from the `Scan History`
    
-<img alt="Internal scan" src="/readme-images/Add_internal_target.png" width="50%">
+<img alt="Internal scan" src="/.github/screenshots/Add_internal_target.png" width="50%">
 
 ### Change a pentest status
 1. Go to the `Organization` menu
 2. Add a new organization
 3. From the organization list you can change the `Testing status`
    
-<img alt="Pentest status" src="/readme-images/Testing_status.png" width="50%">
+<img alt="Pentest status" src="/.github/screenshots/Testing_status.png" width="50%">
 
 ### Generate a global report
 1. Go to the `Organization` menu
@@ -51,11 +51,11 @@ reNgine++ makes it easy for penetration testers and security auditors to gather 
 5. Import your new template by clicking on `Import Latex template`
 6. Do some scans
 7. From the `Organization` menu, download the report using the download button on the company line
-<img alt="Global report" src="/readme-images/Download_report.png" width="50%">
+<img alt="Global report" src="/.github/screenshots/Download_report.png" width="50%">
 
 
 <p>
-Despite theses awesome new features, the interface and the mecanics remains the same hence the original documentation is still valid: <a href="https://rengine.wiki">rengine.wiki</a>
+Despite theses awesome new features, the interface and the mechanics remains the same hence the original documentation is still valid: <a href="https://rengine.wiki">rengine.wiki</a>
 </p>
 
 ---
